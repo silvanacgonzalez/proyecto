@@ -3,6 +3,8 @@ class ActaAcuerdo extends AppModel {
     var $name = ' Acta_acuerdo'; 
     var $validate = array (); 
  
+    
+    
     var $hasOne = array(
 	// RELACION ACTAACUERDO:PROYECTO 1:1    		 
             'Proyecto' => array( 
