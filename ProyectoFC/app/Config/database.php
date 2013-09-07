@@ -59,9 +59,9 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'database_name',
+		'login' => 'pablo',
+		'password' => 'pablo',
+		'database' => 'proyecto',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
