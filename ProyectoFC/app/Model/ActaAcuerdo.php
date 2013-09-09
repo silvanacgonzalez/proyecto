@@ -38,6 +38,7 @@ class ActaAcuerdo extends AppModel {
     				'foreignKey'    => 'grupo_id',
     		)
     );    
+        
   } 
 ?>
 
