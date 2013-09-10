@@ -5,19 +5,30 @@ class Equipo extends AppModel {
 	//Relacion Equipo:Plan 1.1
 	var $hasOne = array(
 			'Plan' => array(
-					'className'  => 'Plan',
+					'className'  	=> 'Plan',
 					'foreignKey'    => 'plan_id',
-					//'conditions'    => array('Comentario.estado' => '1'),
-					'order'      => 'Equipo.id DESC'
+					//'conditions'  => array('Comentario.estado' => '1'),
+					'order'      	=> 'Equipo.id DESC'
 			)
 	);
-	//Relacion Equipo:EquipoInteg 1.n
+	//Relacion Equipo:Integrante 1.n
+	var $hasAndBelongsToMany = array(
+			'Equipo' => array(
+					'className'  				=> 'Equipo',
+					'joinTable'    				=> 'equipos_integrantes',
+					'foreignKey'    			=> 'equipo_id',
+					'associationForeignKey'    	=> 'integrante_id',
+					//'conditions'   	 		=> array('Comentario.estado' => '1'),
+					'order'      				=> 'Equipo.id DESC'
+			)
+	);
+	//Relacion Equipo:EquipoIntegrantes 1.n
 	var $hasMany = array(
-			'EquipoInteg' => array(
-					'className'  => 'EquipoInteg',
-					'foreignKey'    => 'equipo_integ_id',
-					//'conditions'    => array('Comentario.estado' => '1'),
-					'order'      => 'EquipoInteg.id DESC'
+			'EquipoIntegrantes' => array(
+					'className'  	=> 'EquipoIntegrantes',
+					'foreignKey'    => 'equipos_integrantes_id',
+					//'conditions'  => array('Comentario.estado' => '1'),
+					'order'      	=> 'Equipo.id DESC'
 			)
 	);
 }

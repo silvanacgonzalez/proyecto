@@ -1,6 +1,6 @@
 <?php 
 class DeptoGpoDirs extends AppModel { 
-    var $name = ' Depto_gpo_dirs '; 
+    var $name = ' DeptoGpoDirs '; 
     var $validate = array (); 
     // RELACION DEPTOGPODIR:DEPARTAMENTO 1:N
     var $hasMany = array(
@@ -8,9 +8,9 @@ class DeptoGpoDirs extends AppModel {
     				'className'     => 'Departamento',
     				'foreignKey'    => 'departamento_id',
     		),
-
+);
     // RELACION DEPTOGPODIR:GRUPO 1:N
-
+    var $hasMany = array(
     		'Grupo' => array(
     				'className'     => 'Grupo',
     				'foreignKey'    => 'grupo_id',

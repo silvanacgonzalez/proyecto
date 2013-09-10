@@ -7,6 +7,7 @@ class Encuesta extends AppModel {
 			'Proyecto' => array(
 					'className'     => 'Proyecto',
 					'foreignKey'    => 'proyecto_id',
+					'order'         => 'Encuesta.id DESC'
 			)
 	);	
 }

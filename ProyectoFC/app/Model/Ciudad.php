@@ -9,23 +9,24 @@ class Ciudad extends AppModel {
                     'foreignKey'    => 'provincia_id', 
                             ) 
                         ); 
+    //--------------------------------------------------------------------------------
     // RELACION CIUDAD:COMITENTE 1:N
-    var $hasMany = array(
+    var $belongsTo = array(
     		'Comitente' => array(
     				'className'     => 'Comitente',
     				'foreignKey'    => 'comitente_id',
     		),
-
+           );
     // RELACION CIUDAD:CONTACTO 1:N
-
-    		'Contacto' => array(
+    	var $belongsTo = array(
+    		   		'Contacto' => array(
     				'className'     => 'Contacto',
     				'foreignKey'    => 'contacto_id',
     		),
-
+           );
     // RELACION CIUDAD:PERSONA 1:N
-
-    		'Persona' => array(
+    	var $belongsTo = array(
+    	    'Persona' => array(
     				'className'     => 'Persona',
     				'foreignKey'    => 'persona_id',
     		)

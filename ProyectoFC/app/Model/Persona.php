@@ -8,9 +8,11 @@ class Persona extends AppModel {
 					'className'     => 'Ciudad',
 					'foreignKey'    => 'ciudad_id',
 							),
-
+);
+	
+	
 	// RELACION PERSONA:INTEGRANTE 1:1
-
+	var $belongsTo = array(
 			'Integrante' => array(
 					'className'     => 'Integrante',
 					'foreignKey'    => 'integrante_id',

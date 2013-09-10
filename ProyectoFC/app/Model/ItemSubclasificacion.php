@@ -3,12 +3,12 @@ class ItemSubclasificacion extends AppModel {
 	var $name = 'ItemSubclasificacion';
 	var $validate = array('nombre' => array('rule' => 'notEmpty'));
 	//Relacion ItemSubclasificacion:Clasificacion 1.1
-	var $hasOne = array(
+	var $belongsTo = array(
 			'Clasificacion' => array(
-					'className'  => 'Clasificacion',
+					'className'  	=> 'Clasificacion',
 					'foreignKey'    => 'clasificacion_id',
-					//'conditions'    => array('Comentario.estado' => '1'),
-					'order'      => 'ItemSubclasificacion.id DESC'
+					//'conditions'  => array('Comentario.estado' => '1'),
+					'order'      	=> 'ItemSubclasificacion.id DESC'
 			)
 	);
 }

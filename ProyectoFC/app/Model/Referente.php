@@ -7,10 +7,10 @@ class Referente extends AppModel {
 			'Comitente' => array(
 					'className'     => 'Comitente',
 					'foreignKey'    => 'comitente_id',
-							),
-
+							),);
+//--------------------------------------------------
 	// RELACION REFERENTE:PROYECTO
-
+	var $belongsTo = array(
 			'Proyecto' => array(
 					'className'     => 'Proyecto',
 					'foreignKey'    => 'proyecto_id',

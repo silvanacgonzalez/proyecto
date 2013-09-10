@@ -16,7 +16,13 @@ class RecursoMaterial extends AppModel {
 					'foreignKey'    => 'rubro_id',
 			)
 	);
-	
+	// RELACION RECURSOMATERIAL:FRECEUNCIA 1:1
+	var $hasOne = array(
+			'Frencuencia' => array(
+					'className'     => 'Frecuencia',
+					'foreignKey'    => 'frecuencia_id',
+			)
+	);
 	
 }
 ?>

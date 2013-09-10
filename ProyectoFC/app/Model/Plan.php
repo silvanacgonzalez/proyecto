@@ -9,29 +9,32 @@ class Plan extends AppModel {
 					'className'     => 'Proyecto',
 					'foreignKey'    => 'proyecto_id',
 							),
-                    	
-	// RELACION PLAN: RECURSOMATERIAL 1:n
+                    	);
+	//-------------------------------------------------------
 
-			'Recurso_Material' => array(
-					'className'     => 'Recurso_Material',
-					'foreignKey'    => 'recurso_material_id',
-			),
-	
 	// RELACION PLAN:EQUIPO 1:n
-	
-			'Equipo' => array(
-					'className'     => 'Equipo',
-					'foreignKey'    => 'equipo_id',
-			),
-	
+	var $belongsTo = array(
+	'Equipo' => array(
+			'className'     => 'Equipo',
+			'foreignKey'    => 'equipo_id',
+	),
+	);
 	// RELACION PLAN:ETAPAS 1:n
-	
-			'Etapa' => array(
-					'className'     => 'Etapa',
-					'foreignKey'    => 'etapa_id',
-			)
+	var $belongsTo = array(
+	'Etapa' => array(
+			'className'     => 'Etapa',
+			'foreignKey'    => 'etapa_id',
+	)
 	);
 	
+	// RELACION PLAN: RECURSOMATERIAL 1:n
+	var $belongsTo = array(
+			'RecursoMaterial' => array(
+					'className'     => 'RecursoMaterial',
+					'foreignKey'    => 'recurso_material_id',
+			),
+		
+		);
 	
 }
 

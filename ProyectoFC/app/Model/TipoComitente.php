@@ -1,6 +1,6 @@
 <?php
 class TipoComitente extends AppModel {
-	var $name = 'Tipo_Comitente';
+	var $name = 'TipoComitente';
 	var $validate = array ();
 	// RELACION TIPOCOMITENTE:COMITENTE 1:N
 	var $hasMany = array(

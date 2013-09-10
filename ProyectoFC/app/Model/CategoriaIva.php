@@ -1,9 +1,9 @@
 <?php 
 class CategoriaIva extends AppModel { 
-    var $name = 'Categoria_iva'; 
+    var $name = 'CategoriaIva'; 
     var $validate = array (); 
     // RELACION CATEGORIAIVA:COMITENTE 1:N
-    var $hasMany = array(
+    var $belongsto = array(
     		'Comitente' => array(
     				'className'     => 'Comitente',
     				'foreignKey'    => 'comitente_id',

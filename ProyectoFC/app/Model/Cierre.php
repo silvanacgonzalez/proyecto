@@ -12,15 +12,16 @@ class Cierre extends AppModel {
 
     // RELACION CIERRE:MOTIVOCIERRE 1:N 
     var $hasMany = array( 
-            'Motivo_cierre' => array( 
-                    'className'     => 'Motivo_cierre', 
+            'MotivoCierre' => array( 
+                    'className'     => 'MotivoCierre', 
                     'foreignKey'    => 'motivo_cierre_id', 
                             ), 
- 
+    		);
+ //-----------------------------------------------------------------------
     // RELACION CIERRE:PREGUNTACIERRE 1:N
-
-    		'Pregunta' => array(
-    				'className'     => 'Preg_cierre',
+    var $belongsTo = array(
+    		'PregCierre' => array(
+    				'className'     => 'PregCierre',
     				'foreignKey'    => 'preg_cierre_id',
     		)
     	);

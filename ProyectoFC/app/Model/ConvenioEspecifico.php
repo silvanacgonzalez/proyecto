@@ -1,6 +1,6 @@
 <?php 
 class ConvenioEspecifico extends AppModel { 
-    var $name = 'Convenio_especifico'; 
+    var $name = 'ConvenioEspecifico'; 
     var $validate = array (); 
 
     // RELACION CONVENIOESPECIFICO:DEPARTAMENTO 1:N 
@@ -8,43 +8,57 @@ class ConvenioEspecifico extends AppModel {
             'Departamento' => array( 
                     'className'     => 'Departamento', 
                     'foreignKey'    => 'departamento_id', 
-                            ), 
- 
+                            ) 
+                        ); 
     // RELACION CONVENIOESPECIFICO:GRUPO 1:N 
 
- 
+    var $hasMany = array( 
             'Grupo' => array( 
                     'className'     => 'Grupo', 
                     'foreignKey'    => 'grupo_id', 
                             ) 
                         ); 
-
+    // RELACION CONVENIOESPECIFICO:COMITENTE 1:1 
 
     var $hasOne = array( 
-	// RELACION CONVENIOESPECIFICO:COMITENTE 1:1
             'Comitente' => array( 
                     'className'     => 'Comitente', 
                     'foreignKey'    => 'comitente_id', 
-                            ), 
- 
-	// RELACION CONVENIOESPECIFICO:PROYECTO 1:1 
+                            ) 
+                        ); 
+// RELACION CONVENIOESPECIFICO:PROYECTO 1:1 
 
- 
+    var $hasOne = array( 
             'Proyecto' => array( 
                     'className'     => 'Proyecto', 
                     'foreignKey'    => 'proyecto_id', 
-                            ), 
- 
-
+                            ) 
+                        ); 
+    // RELACION CONVENIOESPECIFICO:ENTIDADFIRMANTE 1:1
+    
+    var $hasOne = array(
+    		'EntidadFirmante' => array(
+    				'className'     => 'EntidadFirmante',
+    				'foreignKey'    => 'entidad_firmante_id',
+    		)
+    );
+    //------------------------------------------------------------
     // RELACION CONVENIOESPECIFICO:ARCHIVOCONVENIO 1:1
     
-
-    		'Archivo_convenio' => array(
-    				'className'     => 'Archivo_convenio',
+    var $belongsTo = array(
+    		'ArchivoConvenio' => array(
+    				'className'     => 'ArchivoConvenio',
     				'foreignKey'    => 'archivo_convenio_id',
     		)
     );
     
+    // RELACION CONVENIOESPECIFICO:ENTIDADFIRMANTE 1:1
+    var $belongsto = array(
+    		'EntidadFirmante' => array(
+    				'className'     => 'EntidadFirmante',
+    				'foreignKey'    => 'entidad_firmante_id',
+    		)
+    );
     
     
     

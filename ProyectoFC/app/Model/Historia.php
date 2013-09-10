@@ -3,12 +3,12 @@ class Historia extends AppModel {
 	var $name = 'Historia';
 	var $validate = array('nombre' => array('rule' => 'notEmpty'), 'descripcion' => array('rule' => 'notEmpty'));
 	//Relacion Historia:Proyecto 1.1
-	var $hasOne = array(
+	var $belongsTo = array(
 			'Proyecto' => array(
-					'className'  => 'Proyecto',
+					'className'  	=> 'Proyecto',
 					'foreignKey'    => 'proyecto_id',
-					//'conditions'    => array('Comentario.estado' => '1'),
-					'order'      => 'Historia.id DESC'
+					//'conditions   => array('Comentario.estado' => '1'),
+					'order'     	=> 'Historia.id DESC'
 			)
 	);
 }
