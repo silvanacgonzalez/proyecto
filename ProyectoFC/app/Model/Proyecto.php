@@ -1,7 +1,17 @@
 <?php
 class Proyecto extends AppModel {
 	var $name = 'Proyecto';
-	var $validate = array ();
+	var $validate = array('nombre' => array('rule' =>'notEmpty'),
+			'categoria_id' => array('rule' => 'notEmpty'),
+			'grupo_id' => array('rule' => 'notEmpty'),
+			'departamento_id' => array('rule' => 'notEmpty'),
+			'comitente_id' => array('rule' => 'notEmpty'),
+			'contacto_id' => array('rule' => 'notEmpty'),
+			'director_id' => array('rule' => 'notEmpty'),
+			'clasificacion_id' => array('rule' => 'notEmpty'),
+			'referente_id' => array('rule' => 'notEmpty'),
+			'estado_id' => array('rule' => 'notEmpty'));
+	
 	// RELACION PROYECTO:CATEGORIA 1:1
 	var $hasOne = array(
 	'Categoria' => array(

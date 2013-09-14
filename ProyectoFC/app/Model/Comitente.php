@@ -2,9 +2,13 @@
 class Comitente extends AppModel { 
     var $name = 'Comitente'; 
     var $validate = array (); 
-    
-    
-	// RELACION COMITENTE:CIUDAD 1:1
+    var $validate = array('nombre' => array('rule' => 'notEmpty'),
+    		'direccion' => array('rule' => 'notEmpty'), 'tipo_comitente' => array('rule' => 'notEmpty'),
+    		'telefono' => array('rule' => 'notEmpty'),
+    		'ciudad_id' => array('rule' => 'notEmpty'),
+    		'provincia_id' => array('rule' => 'notEmpty'),
+    		'categoria_iva_id' => array('rule' => 'notEmpty'));
+    // RELACION COMITENTE:CIUDAD 1:1
     var $hasOne = array(
             'Ciudad' => array( 
                     'className'     => 'Ciudad', 

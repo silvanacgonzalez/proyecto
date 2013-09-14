@@ -1,8 +1,12 @@
 <?php 
 class ConvenioMarco extends AppModel { 
     var $name = 'Convenio_marco'; 
-    var $validate = array (); 
-
+    var $validate = array('fecha_ini' => array('rule' => 'notEmpty'),
+    		'fecha_creacion' => array('rule' => 'notEmpty'), 
+    		'objetivo' => array('rule' => 'notEmpty'),
+    		'estado' => array('rule' => 'notEmpty'),
+    		'comitente_id' => array('rule' => 'notEmpty'),
+  		       
     // RELACION CONVENIOMARCO:COMITENTE 1:1 
     
    var $hasOne = array( 

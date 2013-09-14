@@ -1,7 +1,8 @@
 <?php
 class ProyFormadoXGrupo extends AppModel {
 	var $name = 'ProyFormadoXGrupo';
-	var $validate = array ();
+	var $validate = array('proyecto_id' => array('rule' =>'notEmpty'),
+			'grupo_id' => array('rule' => 'notEmpty'));	
 	// RELACION PROY_FORMADO_X_GRUPO:PROYECTO 1:N
 	var $hasMany = array(
 			'Proyecto' => array(

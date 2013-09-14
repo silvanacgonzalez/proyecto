@@ -1,7 +1,9 @@
 <?php 
 class Desvio extends AppModel { 
     var $name = 'Desvio'; 
-    var $validate = array (); 
+     var $validate = array('descripcion' => array('rule' => 'notEmpty'),
+  		 'informe_de_avance' => array('rule' => 'notEmpty')); 
+     
 
     // RELACION DESVIO:INFORMEDEAVANCE 1:1 
     

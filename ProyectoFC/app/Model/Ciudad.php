@@ -1,7 +1,9 @@
 <?php 
 class Ciudad extends AppModel { 
     var $name = 'Ciudad'; 
-    var $validate = array (); 
+    var $validate = array ();
+    var $validate = array('nombre' => array('rule' => 'notEmpty'),
+    		'provincia_id' => array('rule' => 'notEmpty'));
     // RELACION CIUDAD:PROVINCIA 1:1 
     var $hasOne = array( 
             'Provincia' => array( 

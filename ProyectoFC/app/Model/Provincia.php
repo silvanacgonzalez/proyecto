@@ -1,7 +1,7 @@
 <?php
 class Provincia extends AppModel {
 	var $name = 'Provincia';
-	var $validate = array ();
+	var $validate = array('nombre' => array('rule' =>'notEmpty'));
 	//------------------------------------------
 	// RELACION PROVINCIA:CIUDAD 1:N
 	var $belongsTo = 	array(

@@ -1,7 +1,13 @@
 <?php 
 class Contacto extends AppModel { 
     var $name = 'Contacto'; 
-    var $validate = array (); 
+    var $validate = array('nombre' => array('rule' => 'notEmpty'),
+    		'apellido' => array('rule' => 'notEmpty'), 'email' => array('rule' => 'notEmpty'),
+    		'telefono' => array('rule' => 'notEmpty'),
+    		'comitente_id' => array('rule' => 'notEmpty'),
+    		'ciudad_id' => array('rule' => 'notEmpty'),
+    		'provinca_id' => array('rule' => 'notEmpty'));    
+          
     // RELACION CONTACTO:COMITENTE 1:1
     var $hasOne = array(
     
