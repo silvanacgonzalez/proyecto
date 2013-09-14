@@ -1,7 +1,14 @@
 <?php 
 class ConvenioEspecifico extends AppModel { 
     var $name = 'ConvenioEspecifico'; 
-    var $validate = array (); 
+    var $validate = array('fecha_ini' => array('rule' => 'notEmpty'),
+    		'fecha_fin' => array('rule' => 'notEmpty'), 
+    		'objetivo' => array('rule' => 'notEmpty'),
+    		'estado' => array('rule' => 'notEmpty'),
+    		'departamento_id' => array('rule' => 'notEmpty'),
+    		'grupo_id' => array('rule' => 'notEmpty'),
+  		    'comitente_id' => array('rule' => 'notEmpty'),
+  		    'proyecto_id' => array('rule' => 'notEmpty')); 
 
     // RELACION CONVENIOESPECIFICO:DEPARTAMENTO 1:N 
     var $hasMany = array( 

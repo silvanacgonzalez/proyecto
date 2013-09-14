@@ -1,7 +1,7 @@
 <?php
 class PagoMensual extends AppModel {
 	var $name = 'PagoMensual';
-	var $validate = array ();
+	 var $validate = array('nombre' => array('rule' => 'notEmpty'));
 //-----------------------------------------------------------
 	// RELACION PAGOMENSUAL:INTEGRANTE 1:N
 	

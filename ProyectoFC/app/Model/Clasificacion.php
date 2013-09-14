@@ -1,7 +1,7 @@
 <?php 
 class Clasificacion extends AppModel { 
     var $name = 'Clasificacion'; 
-    var $validate = array (); 
+      var $validate = array('nombre' => array('rule' => 'notEmpty'));
     // RELACION CLASIFICACION:ITEMSUBCLASIFICACION 1:N
     var $belongsTo = array(
     		'ItemSubclasificacion' => array(

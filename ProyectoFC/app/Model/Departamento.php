@@ -1,7 +1,8 @@
 <?php 
 class Departamento extends AppModel { 
     var $name = 'Departamento'; 
-    var $validate = array (); 
+    var $validate = array('nombre' => array('rule' => 'notEmpty')); 
+    
 //-----------------------------------------------
     var $belongsTo = array(
 	// RELACION DEPARTAMENTO:ACTAACUERDO 1:N    		

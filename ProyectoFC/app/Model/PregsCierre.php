@@ -1,7 +1,12 @@
 <?php
 class PregsCierre extends AppModel {
-	var $name = 'PregsCierre';
-	var $validate = array ();
+	  var $name = 'PregsCierre';
+	  var $validate = array('sino' => array('rule' =>'notEmpty'), 
+    		'causa' => array('rule' => 'notEmpty'), 
+    		'ponderacion' => array('rule' => 'notEmpty'),
+	  		'cierre_id' => array('rule' => 'notEmpty'),
+	  		'pregunta_id' => array('rule' => 'notEmpty'));
+	
 	// RELACION PREGS_CIERRE:CIERRE 1:1
 	var $hasOne = array(
 			'Cierre' => array(

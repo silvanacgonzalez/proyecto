@@ -1,7 +1,10 @@
 <?php
 class Referente extends AppModel {
 	var $name = 'Referente';
-	var $validate = array ();
+	var $validate = array('nombre' => array('rule' =>'notEmpty'),
+			'email' => array('rule' => 'notEmpty'),
+			'comitente_id' => array('rule' => 'notEmpty'));
+							
 	// RELACION REFERENTE:COMITENTE 1:n
 	var $hasMany = array(
 			'Comitente' => array(

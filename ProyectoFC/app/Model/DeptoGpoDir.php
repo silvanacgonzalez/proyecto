@@ -1,7 +1,9 @@
 <?php 
 class DeptoGpoDirs extends AppModel { 
     var $name = ' DeptoGpoDirs '; 
-    var $validate = array (); 
+    var $validate = array('departamento_id' => array('rule' => 'notEmpty'), 
+        'grupo_id' => array('rule' => 'notEmpty'), 
+        'director_id' => array('rule' => 'notEmpty')); 
     // RELACION DEPTOGPODIR:DEPARTAMENTO 1:N
     var $hasMany = array(
     		'Departamento' => array(

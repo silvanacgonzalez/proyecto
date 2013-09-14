@@ -1,7 +1,9 @@
 <?php
 class Rubro extends AppModel {
 	var $name = 'Rubro';
-	var $validate = array ();
+    var $validate = array('nombre' => array('rule' =>'notEmpty'));
+			
+		
 	//---------------------------------------------
 	// RELACION RUBRO:RECURSOMATERIAL 1:N
 	var $belongsTo = array(

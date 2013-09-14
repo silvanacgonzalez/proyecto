@@ -1,7 +1,9 @@
 <?php 
 class Cierre extends AppModel { 
     var $name = 'Cierre'; 
-    var $validate = array (); 
+     var $validate = array('proyecto_id' => array('rule' => 'notEmpty'), 
+     	'motivo_cierre_id' => array('rule' => 'notEmpty'));
+        
     // RELACION CIERRE:PROYECTO 1:1 
     var $hasOne = array( 
             'Proyecto' => array( 

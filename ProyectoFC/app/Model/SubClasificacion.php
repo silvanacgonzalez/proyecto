@@ -1,8 +1,8 @@
 <?php
 class SubClasificacion extends AppModel {
 	var $name = 'SubClasificacion';
-	var $validate = array ();
-
+	var $validate = array('nombre' => array('rule' =>'notEmpty'),
+			'clasificacion_id' => array('rule' =>'notEmpty'));
 	// RELACION SUB_CLASIFICACION:CLASIFICACION 1:1
 	var $hasOne = array(
 			'Clasificacion' => array(

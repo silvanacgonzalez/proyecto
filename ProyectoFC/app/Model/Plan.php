@@ -1,8 +1,9 @@
 <?php
 class Plan extends AppModel {
 	var $name = 'Plan';
-	var $validate = array ();
-	
+    var $validate = array('fecha_ini_prob ' => array('rule' =>'notEmpty'), 
+    		'fecha_fin_prob' => array('rule' => 'notEmpty'), 
+    		'proyecto_id' => array('rule' => 'notEmpty'));
 	var $hasOne = array(
 	// RELACION PLAN:PROYECTO 1:1
 			'Proyecto' => array(
