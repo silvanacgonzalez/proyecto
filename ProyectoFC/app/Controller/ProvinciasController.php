@@ -10,7 +10,7 @@ class ProvinciasController extends AppController{
 		if (!$id) {
 			throw new NotFoundException(__('Invalid provincia'));
 		}
-		$post = $this->Provincia->findById($id);
+		$provincia = $this->Provincia->findById($id);
 		if (!$provincia) {
 			throw new NotFoundException(__('Invalid post'));
 		}

@@ -4,7 +4,7 @@ class Provincia extends AppModel {
 	var $validate = array('nombre' => array('rule' =>'notEmpty'));
 	//------------------------------------------
 	// RELACION PROVINCIA:CIUDAD 1:N
-	var $belongsTo = 	array(
+/*	var $belongsTo = 	array(
 			// RELACION PROVINCIA:CIUDAD 1:N
 			'Ciudad' => array(
 					'className'     => 'Ciudad',
@@ -22,7 +22,7 @@ class Provincia extends AppModel {
 					'className'     => 'Contacto',
 					'foreignKey'    => 'contacto_id',
 			)
-	);
+	);*/
 }
 ?>
 
