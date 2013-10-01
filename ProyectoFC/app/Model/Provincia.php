@@ -9,15 +9,15 @@ class Provincia extends AppModel {
 			'Ciudad' => array(
 					'className'     => 'Ciudad',
 					'foreignKey'    => 'ciudad_id',
-			),);
+			),
 			// RELACION PROVINCIA:COMITENTE 1:N
-	var $belongsTo = 	array(
+	//var $belongsTo = 	array(
 			'Comitente' => array(
 					'className'     => 'Comitente',
 					'foreignKey'    => 'comitente_id',
-			),);
+			),
 			// RELACION PROVINCIA:CONTACTO 1:N
-	var $belongsTo = 	array(
+	//var $belongsTo = 	array(
 			'Contacto' => array(
 					'className'     => 'Contacto',
 					'foreignKey'    => 'contacto_id',
