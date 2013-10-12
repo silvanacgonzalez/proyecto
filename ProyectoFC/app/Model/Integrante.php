@@ -13,8 +13,8 @@ class Integrante extends AppModel {
 	);
 	//Relacion Integrante:Equipo 1.1
 	var $hasAndBelongsToMany = array(
-			'Integrante' => array(
-					'className'  				=> 'Integrante',
+			'Equipo' => array(
+					'className'  				=> 'Equipo',
 					'joinTable'    				=> 'equipos_integrantes',
 					'foreignKey'    			=> 'integrante_id',
 					'associationForeignKey'    	=> 'equipo_id',

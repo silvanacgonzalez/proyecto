@@ -9,7 +9,7 @@ class Actividad extends AppModel {
     var $hasOne = array( 
             'Etapa' => array( 
                     'className'     => 'Etapa', 
-                    'foreignKey'    => 'etapa_id', 
+                    'foreignKey'    => 'id', 
                             ) 
                         ); 
   } 

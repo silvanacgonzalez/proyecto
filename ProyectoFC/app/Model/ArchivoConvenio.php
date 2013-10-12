@@ -11,22 +11,17 @@ class ArchivoConvenio extends AppModel {
     var $hasOne = array( 
             'ActaAcuerdo' => array( 
                     'className'     => 'ActaAcuerdo', 
-                    'foreignKey'    => 'acta_acuerdo_id', 
-                            ) 
-                        ); 
-
+                    'foreignKey'    => 'id', 
+                            ),
     // RELACION ARCHIVOCONVENIO:CONVENIOMARCO 1:1 
-    var $hasOne = array( 
-            'ConvenioMarco' => array( 
+    		'ConvenioMarco' => array( 
                     'className'     => 'ConvenioMarco', 
-                    'foreignKey'    => 'convenio_marco_id', 
-                            ) 
-                        ); 
-    // RELACION ARCHIVOCONVENIO:CONVENIOESPECIFICO 1:1 
-    var $hasOne = array( 
-            'ConvenioEspecifico' => array( 
+                    'foreignKey'    => 'id', 
+                            ), 
+     // RELACION ARCHIVOCONVENIO:CONVENIOESPECIFICO 1:1 
+    		'ConvenioEspecifico' => array( 
                     'className'     => 'ConvenioEspecifico', 
-                    'foreignKey'    => 'convenio_especifico_id', 
+                    'foreignKey'    => 'id', 
                             ) 
                         ); 
 

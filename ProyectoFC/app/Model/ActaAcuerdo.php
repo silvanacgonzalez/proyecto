@@ -10,50 +10,39 @@ class ActaAcuerdo extends AppModel {
 	// RELACION ACTAACUERDO:PROYECTO 1:1    		 
             'Proyecto' => array( 
                     'className'     => 'Proyecto', 
-                    'foreignKey'    => 'proyecto_id', 
+                    'foreignKey'    => 'id', 
                             ), 
-		);
-    // RELACION ACTAACUERDO:CONVENIOMARCO 1:1 
-    		var $hasOne = array(
-            'ConvenioMarco' => array( 
+	// RELACION ACTAACUERDO:CONVENIOMARCO 1:1 
+    		'ConvenioMarco' => array( 
                     'className'     => 'ConvenioMarco', 
-                    'foreignKey'    => 'convenio_marco_id', 
-            ), 
-		 );
-    // RELACION ACTAACUERDO:DEPARTAMENTO 1:N
-    		var $hasMany = array(
-    				'Departamento' => array(
-    						'className'     => 'Departamento',
-    						'foreignKey'    => 'departamento_id',
-    				),
-    		);
-    		
-    // RELACION ACTAACUERDO:GRUPO 1:N
-    		var $hasMany = array(
-    				'Grupo' => array(
-    						'className'     => 'Grupo',
-    						'foreignKey'    => 'grupo_id',
-    				)
-    		);
-    		
+                    'foreignKey'    => 'id', 
+    				        ), 
     // RELACION ACTAACUERDO:ENTIDADFIRMANTE 1:1
-    		var $hasOne = array(
-    				'EntidadFirmante' => array(
-    						'className'     => 'EntidadFirmante',
-    						'foreignKey'    => 'entidad_firmante_id',
-    				)
-    		);
+    	'EntidadFirmante' => array(
+    				'className'     => 'EntidadFirmante',
+    				'foreignKey'    => 'id',
+    					)
+    );
+    // RELACION ACTAACUERDO:DEPARTAMENTO 1:N
+    var $hasMany = array(
+    	'Departamento' => array(
+    				'className'     => 'Departamento',
+    				'foreignKey'    => 'id',
+    					),
+   // RELACION ACTAACUERDO:GRUPO 1:N
+   		'Grupo' => array(
+    				'className'     => 'Grupo',
+    				'foreignKey'    => 'id',
+    					)
+    );
     		
-    		
-    //----------------------------------------------------------------------		
-    // RELACION ACTAACUERDO:ARCHIVOCONVENIO 1:1
-    		var $belongsTo = array(
-    		'Archivo_convenio' => array(
+  	// RELACION ACTAACUERDO:ARCHIVOCONVENIO 1:1
+    var $belongsTo = array(
+    	'Archivo_convenio' => array(
     				'className'     => 'Archivoconvenio',
-    				'foreignKey'    => 'archivo_convenio_id',
-    		),
+    				'foreignKey'    => 'id',
+    					),
     	);
-    		     
-  } 
+ } 
 ?>
 
