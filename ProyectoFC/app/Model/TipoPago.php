@@ -4,7 +4,7 @@ class TipoPago extends AppModel {
 		var $validate = array('descripcion' => array('rule' =>'notEmpty'));
 	//---------------------------
 	// RELACION TIPOPAGO:INTEGRANTE 1:N
-	var $belongsTo = array(
+	var $hasMany = array(
 			'Integrante' => array(
 					'className'     => 'Integrante',
 					'foreignKey'    => 'Integrante_id',

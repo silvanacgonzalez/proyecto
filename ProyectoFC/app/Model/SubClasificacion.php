@@ -4,7 +4,7 @@ class SubClasificacion extends AppModel {
 	var $validate = array('nombre' => array('rule' =>'notEmpty'),
 			'clasificacion_id' => array('rule' =>'notEmpty'));
 	// RELACION SUB_CLASIFICACION:CLASIFICACION 1:1
-	var $hasOne = array(
+	var $belongsTo = array(
 			'Clasificacion' => array(
 					'className'     => 'Clasificacion',
 					'foreignKey'    => 'clasificacion_id',
@@ -12,10 +12,10 @@ class SubClasificacion extends AppModel {
 	);
 	//---------------------------------------------------------
 	// RELACION SUB_CLASIFICACION:ITEMS_CLASIFICACION 1:N
-	var $belongsTo = array(
+	var $hasMany = array(
 			'ItemClasificacion' => array(
 					'className'     => 'ItemClasificacion',
-					'foreignKey'    => 'item_clasificacion_id',
+					'foreignKey'    => 'itemclasificacion_id',
 							)
                     	);
 }

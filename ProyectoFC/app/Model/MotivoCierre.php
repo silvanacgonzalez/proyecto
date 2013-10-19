@@ -6,9 +6,8 @@ class MotivoCierre extends AppModel {
 	var $hasMany = array(
 			'Cierre' => array(
 					'className'  	=> 'Cierre',
-					'foreignKey'    => 'cierre_id',
+					'foreignKey'    => 'motivo_cierre_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'MotivoCierre.id DESC'
 			)
 	);
 }

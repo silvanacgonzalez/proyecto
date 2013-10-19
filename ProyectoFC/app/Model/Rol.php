@@ -4,7 +4,7 @@ class Rol extends AppModel {
 	var $validate = array('descripcion' => array('rule' =>'notEmpty'));
 	//--------------------------------------
 	// RELACION ROL:INTEGRANTE 1:n
-	var $belongsTo = array(
+	var $hasMany = array(
 			'Rol' => array(
 					'className'     => 'Rol',
 					'foreignKey'    => 'rol_id',

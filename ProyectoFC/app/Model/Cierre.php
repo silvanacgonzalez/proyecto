@@ -5,26 +5,25 @@ class Cierre extends AppModel {
      	'motivo_cierre_id' => array('rule' => 'notEmpty'));
         
     // RELACION CIERRE:PROYECTO 1:1 
-    var $hasOne = array( 
+    var $belongsTo = array( 
             'Proyecto' => array( 
                     'className'     => 'Proyecto', 
                     'foreignKey'    => 'proyecto_id', 
-                            ) 
-                        ); 
-
+                            ), 
     // RELACION CIERRE:MOTIVOCIERRE 1:N 
-    var $hasMany = array( 
             'MotivoCierre' => array( 
                     'className'     => 'MotivoCierre', 
                     'foreignKey'    => 'motivo_cierre_id', 
                             ), 
     		);
- //-----------------------------------------------------------------------
+
+    
+    //-----------------------------------------------------------------------
     // RELACION CIERRE:PREGUNTACIERRE 1:N
-    var $belongsTo = array(
+    var $hasMany = array(
     		'PregCierre' => array(
     				'className'     => 'PregCierre',
-    				'foreignKey'    => 'preg_cierre_id',
+    				'foreignKey'    => 'cierre_id',
     		)
     	);
     }

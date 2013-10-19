@@ -6,20 +6,18 @@ class Integrante extends AppModel {
 	var $hasOne = array(
 			'Director' => array(
 					'className'  	=> 'Director',
-					'foreignKey'    => 'director_id',
+					'foreignKey'    => 'integrante_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'Integrante.id DESC'
 			)
 	);
-	//Relacion Integrante:Equipo 1.1
+	//Relacion Integrante:Equipo 
 	var $hasAndBelongsToMany = array(
-			'Integrante' => array(
-					'className'  				=> 'Integrante',
+			'Equipo' => array(
+					'className'  				=> 'Equipo',
 					'joinTable'    				=> 'equipos_integrantes',
 					'foreignKey'    			=> 'integrante_id',
 					'associationForeignKey'    	=> 'equipo_id',
 					//'conditions'   	 		=> array('Comentario.estado' => '1'),
-					'order'      				=> 'Integrante.id DESC'
 			)
 	);
 	//Relacion Integrante:Persona 1.1
@@ -28,37 +26,24 @@ class Integrante extends AppModel {
 					'className'  	=> 'Persona',
 					'foreignKey'    => 'persona_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'Integrante.id DESC'
 			),
 			//Relacion Integrante:CategoriaPersona 1.1
 			'CategoriaPersona' => array(
 					'className'  	=> 'CategoriaPersona',
 					'foreignKey'    => 'categoria_persona_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'Integrante.id DESC'
 			),
 			//Relacion Integrante:Rol 1.1
 			'Rol' => array(
 					'className'  	=> 'Rol',
 					'foreignKey'    => 'rol_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'Integrante.id DESC'
 			),
 			//Relacion Integrante:TipoPago 1.1
 			'TipoPago' => array(
 					'className'  	=> 'TipoPago',
 					'foreignKey'    => 'tipo_pago_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'Integrante.id DESC'
-			)
-	);
-	//Relacion Integrante:EquipoIntegrante 1.n
-	var $hasMany = array(
-			'EquipoIntegrante' => array(
-					'className'  	=> 'EquipoIntegrante',
-					'foreignKey'    => 'equipo_integrante_id',
-					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'Integrante.id DESC'
 			)
 	);
 }

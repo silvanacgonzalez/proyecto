@@ -5,15 +5,15 @@ class Referente extends AppModel {
 			'email' => array('rule' => 'notEmpty'),
 			'comitente_id' => array('rule' => 'notEmpty'));
 							
-	// RELACION REFERENTE:COMITENTE 1:n
-	var $hasMany = array(
+	// RELACION REFERENTE:COMITENTE 1:1
+	var $belongsTo = array(
 			'Comitente' => array(
 					'className'     => 'Comitente',
 					'foreignKey'    => 'comitente_id',
 							),);
 //--------------------------------------------------
 	// RELACION REFERENTE:PROYECTO
-	var $belongsTo = array(
+	var $hasOne = array(
 			'Proyecto' => array(
 					'className'     => 'Proyecto',
 					'foreignKey'    => 'proyecto_id',

@@ -8,7 +8,6 @@ class FacRecDetalle extends AppModel {
 					'className'  	=> 'Rubro',
 					'foreignKey'    => 'rubro_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'FacRecDetalle.id DESC'
 			)
 	);
 	//Relacion FacRecDetalle:FacturaEmitida 1.1
@@ -17,7 +16,6 @@ class FacRecDetalle extends AppModel {
 					'className'  	=> 'FacturaRecibida',
 					'foreignKey'    => 'factura_recibida_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'FacRecDetalle.id DESC'
 			)
 	);
 }

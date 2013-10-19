@@ -8,7 +8,6 @@ class FacEmitDetalle extends AppModel {
 					'className'  	=> 'Rubro',
 					'foreignKey'    => 'rubro_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'FacEmitDetalle.id DESC'
 			)
 	);
 	//Relacion FacEmitDetalle:FacturaEmitida 1.1
@@ -17,7 +16,6 @@ class FacEmitDetalle extends AppModel {
 					'className'  	=> 'FacturaEmitida',
 					'foreignKey'    => 'factura_emitida_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'FacEmitDetalle.id DESC'
 			)
 	);
 }

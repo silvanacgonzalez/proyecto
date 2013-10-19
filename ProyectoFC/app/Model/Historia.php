@@ -8,7 +8,6 @@ class Historia extends AppModel {
 					'className'  	=> 'Proyecto',
 					'foreignKey'    => 'proyecto_id',
 					//'conditions   => array('Comentario.estado' => '1'),
-					'order'     	=> 'Historia.id DESC'
 			)
 	);
 }
