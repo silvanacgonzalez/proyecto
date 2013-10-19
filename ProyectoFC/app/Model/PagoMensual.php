@@ -5,7 +5,7 @@ class PagoMensual extends AppModel {
 //-----------------------------------------------------------
 	// RELACION PAGOMENSUAL:INTEGRANTE 1:N
 	
-	var $belongsTo = array(
+	var $hasmany = array(
 			'Integrante' => array(
 					'className'     => 'Integrante',
 					'foreignKey'    => 'integrante_id',

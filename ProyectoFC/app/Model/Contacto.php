@@ -9,32 +9,25 @@ class Contacto extends AppModel {
     		'provinca_id' => array('rule' => 'notEmpty'));    
           
     // RELACION CONTACTO:COMITENTE 1:1
-    var $hasOne = array(
-    
+    var $belogns = array(
     		'Comitente' => array(
     				'className'     => 'Comitente',
     				'foreignKey'    => 'comitente_id',
     		),
-  
-    
     // RELACION CONTACTO:CIUDAD 1:1 
-//     var $hasOne = array( 
             'Ciudad' => array( 
                     'className'     => 'Ciudad', 
                     'foreignKey'    => 'ciudad_id', 
                             ), 
- 
     // RELACION CONTACTO:PROVINCIA 1:1 
-//     var $hasOne = array(
              'Provincia' => array( 
                     'className'     => 'Provincia', 
                     'foreignKey'    => 'provincia_id', 
                             ), 
- 
+ );
  //--------------------------------------------------------    
     // RELACION CONTACTO:PROYECTO 1:N
-    
-//     var $belongsTo = array(
+    var $hasMany = array(
     		'Proyecto' => array(
     				'className'     => 'Proyecto',
     				'foreignKey'    => 'proyecto_id',
@@ -44,3 +37,4 @@ class Contacto extends AppModel {
 
   } 
 ?>
+

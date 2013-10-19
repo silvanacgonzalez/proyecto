@@ -6,10 +6,9 @@ class Estado extends AppModel {
 	var $hasMany = array(
 			'Proyecto' => array(
 					'className'  	=> 'Proyecto',
-					'foreignKey'    => 'proyecto_id',
+					'foreignKey'    => 'estado_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-                    'order'     	=> 'Estado.id DESC'
-			)
+            )
 	);
 }
 ?>

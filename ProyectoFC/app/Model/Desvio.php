@@ -7,7 +7,7 @@ class Desvio extends AppModel {
 
     // RELACION DESVIO:INFORMEDEAVANCE 1:1 
     
-   var $hasOne = array( 
+   var $belongsTo = array( 
             'InformeDeAvance' => array( 
                     'className'     => 'InformeDeAvance', 
                     'foreignKey'    => 'informe_de_avance_id', 

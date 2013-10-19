@@ -1,16 +1,16 @@
 <?php
-class ProyFormadoXGrupo extends AppModel {
-	var $name = 'ProyFormadoXGrupo';
+class GruposProyecto extends AppModel {
+	var $name = 'GruposProyecto';
 	var $validate = array('proyecto_id' => array('rule' =>'notEmpty'),
 			'grupo_id' => array('rule' => 'notEmpty'));	
-	// RELACION PROY_FORMADO_X_GRUPO:PROYECTO 1:N
+	// RELACION GruposProyecto:PROYECTO 1:N
 	var $hasMany = array(
 			'Proyecto' => array(
 					'className'     => 'Proyecto',
 					'foreignKey'    => 'proyecto_id',
 							)
                     	);
-	// RELACION PROY_FORMADO_X_GRUPO:GRUPO 1:N
+	// RELACION GruposProyecto:GRUPO 1:N
 	var $hasMany = array(
 			'Grupo' => array(
 					'className'     => 'Grupo',
@@ -20,4 +20,6 @@ class ProyFormadoXGrupo extends AppModel {
 	
 }
 ?>
+
+
 

@@ -9,39 +9,36 @@ class ConvenioMarco extends AppModel {
   		       
     // RELACION CONVENIOMARCO:COMITENTE 1:1 
     
-   var $hasOne = array( 
+   var $belongsTo = array( 
             'Comitente' => array( 
                     'className'     => 'Comitente', 
                     'foreignKey'    => 'comitente_id', 
-                            ) 
-                        );
+                            ) ,
    // RELACION CONVENIOMARCO:ENTIDADFIRMANTE 1:1
-   
-   var $hasOne = array(
    		'EntidadFirmante' => array(
    				'className'     => 'Entidad_Firmante',
    				'foreignKey'    => 'entidad_firmante_id',
    		)
    );
-    //---------------------------------------------------------
+
+   
+   //---------------------------------------------------------
    // RELACION CONVENIOMARCO:ACTAACUERDO 1:N
    
-   var $belongsTo = array(
+   var $hasMany = array(
    		'ActaAcuerdo' => array(
    				'className'     => 'ActaAcuerdo',
    				'foreignKey'    => 'acta_acuerdo_id',
    		)
    );
+   	// RELACION CONVENIOMARCO:ARCHIVOCONVENIO 1:1
    
-   // RELACION CONVENIOMARCO:ARCHIVOCONVENIO 1:1
-   
-   var $belongsTo = array(
+   var $hasMany = array(
    		'ArchivoConvenio' => array(
    				'className'     => 'ArchivoConvenio',
    				'foreignKey'    => 'archivo_convenio_id',
    		)
    );
    
-
   } 
 ?>

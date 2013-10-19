@@ -4,7 +4,7 @@ class Ciudad extends AppModel {
     var $validate = array('nombre' => array('rule' => 'notEmpty'),
     		'provincia_id' => array('rule' => 'notEmpty'));
     // RELACION CIUDAD:PROVINCIA 1:1 
-    var $hasOne = array( 
+    var $belongsTo = array( 
             'Provincia' => array( 
                     'className'     => 'Provincia', 
                     'foreignKey'    => 'provincia_id', 
@@ -12,25 +12,23 @@ class Ciudad extends AppModel {
                         ); 
     //--------------------------------------------------------------------------------
     // RELACION CIUDAD:COMITENTE 1:N
-    var $belongsTo = array(
+    var $hasMany = array(
     		'Comitente' => array(
     				'className'     => 'Comitente',
-    				'foreignKey'    => 'comitente_id',
+    				'foreignKey'    => 'ciudad_id',
     		),
            
     // RELACION CIUDAD:CONTACTO 1:N
-    	//var $belongsTo = array(
-    		   		'Contacto' => array(
+    		'Contacto' => array(
     				'className'     => 'Contacto',
-    				'foreignKey'    => 'contacto_id',
+    				'foreignKey'    => 'ciudad_id',
     		),
-           
     // RELACION CIUDAD:PERSONA 1:N
-    	//var $belongsTo = array(
-    	    'Persona' => array(
+    		
+   		    'Persona' => array(
     				'className'     => 'Persona',
-    				'foreignKey'    => 'persona_id',
-    		)
+    				'foreignKey'    => 'ciudad_id',
+    		),
     );
     }
     ?>

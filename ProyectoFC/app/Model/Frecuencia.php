@@ -6,9 +6,8 @@ class Frecuencia extends AppModel {
 	var $hasMany = array(
 			'RecursoMaterial' => array(
 					'className'  	=> 'RecursoMaterial',
-					'foreignKey'    => 'recurso_material_id',
+					'foreignKey'    => 'frecuencia_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'Frecuencia.id DESC'
 			)
 	);
 }

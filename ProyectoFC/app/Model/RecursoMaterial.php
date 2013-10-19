@@ -8,22 +8,18 @@ class RecursoMaterial extends AppModel {
 			'plan_id' => array('rule' => 'notEmpty'),
 			'rubro_id' => array('rule' => 'notEmpty'));	
 	
-	// RELACION RECURSOMATERIAL:PLAN 1:n
-	var $hasMany = array(
+	// RELACION RECURSOMATERIAL:PLAN 1:1
+	var $belongs = array(
 			'Plan' => array(
 					'className'     => 'Plan',
 					'foreignKey'    => 'plan_id',
-							)
-                    	);
-	// RELACION RECURSOMATERIAL:RUBRO 1:1
-	var $hasOne = array(
+							),
+   // RELACION RECURSOMATERIAL:RUBRO 1:1
 			'Rubro' => array(
 					'className'     => 'Rubro',
 					'foreignKey'    => 'rubro_id',
-			)
-	);
+			),
 	// RELACION RECURSOMATERIAL:FRECEUNCIA 1:1
-	var $hasOne = array(
 			'Frencuencia' => array(
 					'className'     => 'Frecuencia',
 					'foreignKey'    => 'frecuencia_id',

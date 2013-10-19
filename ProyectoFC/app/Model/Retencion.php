@@ -14,7 +14,7 @@ class Retencion extends AppModel {
 
 	
 	// RELACION RETENCION:PROYECTO 1:1
-	var $hasOne = array(
+	var $belongsTo = array(
 			'Proyecto' => array(
 					'className'     => 'Proyecto',
 					'foreignKey'    => 'proyecto_id',
