@@ -8,25 +8,29 @@ class ArchivoConvenio extends AppModel {
      	'convenio_especifico_id' => array('rule' => 'notEmpty'));
         
     // RELACION ARCHIVOCONVENIO:ACTAACUERDO 1:1 
-    var $hasOne = array( 
+    var $belongsTo = array( 
             'ActaAcuerdo' => array( 
                     'className'     => 'ActaAcuerdo', 
-                    'foreignKey'    => 'id', 
-                            ),
-    // RELACION ARCHIVOCONVENIO:CONVENIOMARCO 1:1 
-    		'ConvenioMarco' => array( 
-                    'className'     => 'ConvenioMarco', 
-                    'foreignKey'    => 'id', 
+                    'foreignKey'    => 'acta_acuerdo_id', 
                             ), 
-     // RELACION ARCHIVOCONVENIO:CONVENIOESPECIFICO 1:1 
-    		'ConvenioEspecifico' => array( 
+    // RELACION ARCHIVOCONVENIO:CONVENIOMARCO 1:1 
+            'ConvenioMarco' => array( 
+                    'className'     => 'ConvenioMarco', 
+                    'foreignKey'    => 'convenio_marco_id', 
+                            ),
+    // RELACION ARCHIVOCONVENIO:CONVENIOESPECIFICO 1:1 
+            'ConvenioEspecifico' => array( 
                     'className'     => 'ConvenioEspecifico', 
-                    'foreignKey'    => 'id', 
-                            ) 
+                    'foreignKey'    => 'convenio_especifico_id', 
+                            ),
                         ); 
 
   } 
 ?>
+
+
+
+
 
 
 

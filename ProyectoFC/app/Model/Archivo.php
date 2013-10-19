@@ -6,10 +6,10 @@ class Archivo extends AppModel {
     	'proyecto_id' => array('rule' => 'notEmpty'));
     
     // RELACION ARCHIVO:PROYECTO 1:1 
-    var $hasOne = array( 
+    var $belongsTo = array( 
             'Proyecto' => array( 
                     'className'     => 'Proyecto', 
-                    'foreignKey'    => 'id', 
+                    'foreignKey'    => 'proyecto_id', 
                             ) 
                         ); 
   } 

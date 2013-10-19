@@ -19,7 +19,7 @@ class EstadoNotificacionsController extends AppController {
 	}
 	
 	public function add() {
-		if ($this->request->is('estadonotificacion')) {
+		if ($this->request->is('post')) {
 			$this->EstadoNotificacion->create();
 			if ($this->EstadoNotificacion->save($this->request->data)) {
 				$this->Session->setFlash('El Estado se grabó correctamente');

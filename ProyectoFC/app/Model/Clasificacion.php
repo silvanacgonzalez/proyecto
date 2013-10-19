@@ -3,24 +3,20 @@ class Clasificacion extends AppModel {
     var $name = 'Clasificacion'; 
       var $validate = array('nombre' => array('rule' => 'notEmpty'));
     // RELACION CLASIFICACION:ITEMSUBCLASIFICACION 1:N
-    var $belongsTo = array(
+    var $hasMany = array(
     		'ItemSubclasificacion' => array(
     				'className'     => 'ItemSubclasificacion',
-    				'foreignKey'    => 'item_subclasificacion_id',
+    				'foreignKey'    => 'clasificacion_id',
     		),
-         );
     // RELACION CLASIFICACION:PROYECTO 1:N
-    	var $belongsTo = array(
     		'Proyecto' => array(
     				'className'     => 'Proyecto',
-    				'foreignKey'    => 'proyecto_id',
+    				'foreignKey'    => 'clasificacion_id',
     		),
-);
     // RELACION CLASIFICACION:SUBCLASIFICACION 1:N
-  		var $belongsTo = array(
-    		'Subclasificacion' => array(
+  			'Subclasificacion' => array(
     				'className'     => 'Subclasificacion',
-    				'foreignKey'    => 'subclasificacion_id',
+    				'foreignKey'    => 'clasificacion_id',
     		)
     );
   } 

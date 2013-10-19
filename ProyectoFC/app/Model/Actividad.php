@@ -6,12 +6,14 @@ class Actividad extends AppModel {
     	'etapa_id' => array('rule' => 'notEmpty'));
     
     // RELACION ACTIVIDAD:ETAPA 1:1 
-    var $hasOne = array( 
+    var $belongsTo = array( 
             'Etapa' => array( 
                     'className'     => 'Etapa', 
-                    'foreignKey'    => 'id', 
+                    'foreignKey'    => 'etapa_id', 
                             ) 
                         ); 
   } 
 ?>
+
+
 

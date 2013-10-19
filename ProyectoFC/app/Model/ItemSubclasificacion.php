@@ -8,7 +8,6 @@ class ItemSubclasificacion extends AppModel {
 					'className'  	=> 'Clasificacion',
 					'foreignKey'    => 'clasificacion_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-					'order'      	=> 'ItemSubclasificacion.id DESC'
 			)
 	);
 }
