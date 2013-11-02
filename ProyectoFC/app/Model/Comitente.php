@@ -32,11 +32,11 @@ class Comitente extends AppModel {
     		'className'     => 'ActaAcuerdo',
     		'foreignKey'    => 'comitente_id',
                 ),
-//    // RELACION COMITENTE:PROYTIENECOMIT 1:n
-//    	'Comitentes_Proyectos' => array(
-//      				'className'     => 'Comitentes_Proyectos',
-//      				'foreignKey'    => 'comitente_proyecto_id',
-//      		),
+ //RELACION COMITENTE:COMITENTEPROYECTO 1:n
+    	'ComitentesProyecto' => array(
+      				'className'     => 'ComitentesProyecto',
+      				'foreignKey'    => 'comitente_id',
+     		),
 
 //      // RELACION COMITENTE:CONVENIOESPECIFICO 1:n
      		'ConvenioEspecifico' => array(
@@ -60,12 +60,7 @@ class Comitente extends AppModel {
     				'className'     => 'FacturaRecibida',
     				'foreignKey'    => 'comitente_id',
     		),
-    // RELACION COMITENTE:PROYECTO 1:N
-    'Proyecto' => array(
-    		'className'     => 'Proyecto',
-    		'foreignKey'    => 'proyecto_id',
-    )
-     );
+);
      var $hasOne = array(
     // RELACION COMITENTE:REFERENTE 1:1
     		'Referente' => array(

@@ -18,7 +18,7 @@ class Persona extends AppModel {
 	var $hasOne = array(
 			'Integrante' => array(
 					'className'     => 'Integrante',
-					'foreignKey'    => 'integrante_id',
+					'foreignKey'    => 'persona_id',
 			)
 	);
 	

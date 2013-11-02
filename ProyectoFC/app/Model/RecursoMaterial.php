@@ -25,6 +25,5 @@ class RecursoMaterial extends AppModel {
 					'foreignKey'    => 'frecuencia_id',
 			)
 	);
-	
-}
+	}
 ?>

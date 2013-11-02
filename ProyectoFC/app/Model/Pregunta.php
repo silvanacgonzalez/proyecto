@@ -7,7 +7,7 @@ class Pregunta extends AppModel {
 	var $hasMany = array(
 			'PregCierre' => array(
 					'className'     => 'PregCierre',
-					'foreignKey'    => 'pregcierre_id',
+					'foreignKey'    => 'pregunta_id',
 							)
                     	);
 

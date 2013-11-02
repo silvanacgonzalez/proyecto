@@ -17,17 +17,17 @@ class Plan extends AppModel {
 	var $hasMany = array(
 	'Equipo' => array(
 			'className'     => 'Equipo',
-			'foreignKey'    => 'equipo_id',
+			'foreignKey'    => 'plan_id',
 	),
 	// RELACION PLAN:ETAPAS 1:n
 	'Etapa' => array(
 			'className'     => 'Etapa',
-			'foreignKey'    => 'etapa_id',
+			'foreignKey'    => 'plan_id',
 	),
 	// RELACION PLAN: RECURSOMATERIAL 1:n
 			'RecursoMaterial' => array(
 					'className'     => 'RecursoMaterial',
-					'foreignKey'    => 'recurso_material_id',
+					'foreignKey'    => 'plan_id',
 			),
 		
 		);

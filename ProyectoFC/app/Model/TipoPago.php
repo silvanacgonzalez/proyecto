@@ -7,7 +7,7 @@ class TipoPago extends AppModel {
 	var $hasMany = array(
 			'Integrante' => array(
 					'className'     => 'Integrante',
-					'foreignKey'    => 'Integrante_id',
+					'foreignKey'    => 'tipo_pago_id',
 							)
                     	);
 	

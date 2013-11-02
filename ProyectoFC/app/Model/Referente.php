@@ -16,7 +16,7 @@ class Referente extends AppModel {
 	var $hasOne = array(
 			'Proyecto' => array(
 					'className'     => 'Proyecto',
-					'foreignKey'    => 'proyecto_id',
+					'foreignKey'    => 'referente_id',
 			)
 	);
 	

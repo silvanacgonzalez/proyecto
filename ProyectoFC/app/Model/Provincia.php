@@ -8,17 +8,17 @@ class Provincia extends AppModel {
 			// RELACION PROVINCIA:CIUDAD 1:N
 			'Ciudad' => array(
 					'className'     => 'Ciudad',
-					'foreignKey'    => 'ciudad_id',
+					'foreignKey'    => 'provincia_id',
 			),
 			// RELACION PROVINCIA:COMITENTE 1:N
 			'Comitente' => array(
 					'className'     => 'Comitente',
-					'foreignKey'    => 'comitente_id',
+					'foreignKey'    => 'provincia_id',
 			),
 			// RELACION PROVINCIA:CONTACTO 1:N
 			'Contacto' => array(
 					'className'     => 'Contacto',
-					'foreignKey'    => 'contacto_id',
+					'foreignKey'    => 'provincia_id',
 			)
 	);
 }

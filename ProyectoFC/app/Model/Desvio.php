@@ -9,8 +9,8 @@ class Desvio extends AppModel {
     
    var $belongsTo = array( 
             'InformeDeAvance' => array( 
-                    'className'     => 'InformeDeAvance', 
-                    'foreignKey'    => 'informe_de_avance_id', 
+                    'className'     => 'InformeAvance', 
+                    'foreignKey'    => 'informe_avance_id', 
                             ) 
                         ); 
 
