@@ -8,12 +8,7 @@ class Retencion extends AppModel {
 			'ente_ejecutor' => array('rule' => 'notEmpty'),
 			'ente_ejecutor_monto' => array('rule' => 'notEmpty'),
 			'proyecto_id' => array('rule' => 'notEmpty'));
-	
-	
-	
-
-	
-	// RELACION RETENCION:PROYECTO 1:1
+		// RELACION RETENCION:PROYECTO 1:1
 	var $belongsTo = array(
 			'Proyecto' => array(
 					'className'     => 'Proyecto',

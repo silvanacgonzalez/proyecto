@@ -64,39 +64,39 @@ class Proyecto extends AppModel {
 	var $hasMany = array(
 			'ActaAcuerdo' => array(
 					'className'     => 'ActaAcuerdo',
-					'foreignKey'    => 'acta_acuerdo_id',
+					'foreignKey'    => 'proyecto_id',
 			),
 	// RELACION PROYECTO:ARCHIVO 1:N
 			'Archivo' => array(
 					'className'     => 'Archivo',
-					'foreignKey'    => 'archivo_id',
+					'foreignKey'    => 'proyecto_id',
 			),
 	// RELACION PROYECTO:CONVENIOESPECIFICO 1:1
 			'ConvenioEspecifico' => array(
 					'className'     => 'ConvenioEspecifico',
-					'foreignKey'    => 'convenio_especifico_id',
+					'foreignKey'    => 'proyecto_id',
 			),
 	// RELACION PROYECTO:HISTORIA 1:N
 					'Historia' => array(
 							'className'     => 'Historia',
-							'foreignKey'    => 'historia_id',
+							'foreignKey'    => 'proyecto_id',
 					),
 	// RELACION PROYECTO:INFORMEDEAVANCE 1:N
-					'InformeDeAvance' => array(
-							'className'     => 'InformeDeAvance',
-							'foreignKey'    => 'informe_de_Avance_id',
+					'InformeAvance' => array(
+							'className'     => 'InformeAvance',
+							'foreignKey'    => 'proyecto_id',
 					),
 	// RELACION PROYECTO:NOTIFICACION 1:N
 	'Notificacion' => array(
 			'className'     => 'Notificacion',
-			'foreignKey'    => 'notificacion_id',
+			'foreignKey'    => 'proyecto_id',
 	),	
 	
 	
 	// RELACION PROYECTO:PLAN 1:1
 		'Plan' => array(
 					'className'     => 'Plan',
-					'foreignKey'    => 'plan_id',
+					'foreignKey'    => 'proyecto_id',
 			),);
 	
 	
@@ -105,17 +105,17 @@ class Proyecto extends AppModel {
 	var $hasOne = array(
 			'Cierre' => array(
 					'className'     => 'Cierre',
-					'foreignKey'    => 'cierre_id',
+					'foreignKey'    => 'proyecto_id',
 			),
 	// RELACION PROYECTO:ENCUESTA 1:1
 			'Encuesta' => array(
 					'className'     => 'Encuesta',
-					'foreignKey'    => 'encuesta_id',
+					'foreignKey'    => 'proyecto_id',
 			),
 	// RELACION PROYECTO:RETENCION 1:1
 			'Retencion' => array(
 					'className'     => 'Retencion',
-					'foreignKey'    => 'retencion_id',
+					'foreignKey'    => 'proyecto_id',
 			)
 );
 

@@ -7,12 +7,12 @@ class TipoFactura extends AppModel {
 	var $hasMany = array(
 			'FacturaEmitida' => array(
 					'className'     => 'FacturaEmitida',
-					'foreignKey'    => 'FacturaEmitida_id',
+					'foreignKey'    => 'tipo_factura_id',
 							),
   	// RELACION TIPOFACTURA:FACTURA_RECIBIDA 1:N
 			'FacturaRecibida' => array(
 					'className'     => 'FacturaRecibida',
-					'foreignKey'    => 'facturarecibida_id',
+					'foreignKey'    => 'tipo_factura_id',
 			)
 	);	
 }

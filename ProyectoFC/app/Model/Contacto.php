@@ -30,7 +30,7 @@ class Contacto extends AppModel {
     var $hasMany = array(
     		'Proyecto' => array(
     				'className'     => 'Proyecto',
-    				'foreignKey'    => 'proyecto_id',
+    				'foreignKey'    => 'contacto_id',
     		)
     );
     
