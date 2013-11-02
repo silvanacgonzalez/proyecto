@@ -13,6 +13,7 @@ class PregsCierre extends AppModel {
 					'className'     => 'Cierre',
 					'foreignKey'    => 'cierre_id',
 							),
+			
     // RELACION PREGS_CIERRE:PREGUNTA 1:1
 			'Pregunta' => array(
 					'className'     => 'Pregunta',

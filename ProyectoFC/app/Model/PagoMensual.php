@@ -8,7 +8,7 @@ class PagoMensual extends AppModel {
 	var $hasmany = array(
 			'Integrante' => array(
 					'className'     => 'Integrante',
-					'foreignKey'    => 'integrante_id',
+					'foreignKey'    => 'pago_mensual_id',
 			)
 	);
 }

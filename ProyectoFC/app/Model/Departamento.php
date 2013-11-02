@@ -8,23 +8,23 @@ class Departamento extends AppModel {
 	// RELACION DEPARTAMENTO:ACTAACUERDO 1:N    		
     'ActaAcuerdo' => array(
     				'className'     => 'ActaAcuerdo',
-    				'foreignKey'    => 'acta_acuerdo_id',
+    				'foreignKey'    => 'departamento_id',
     		),
     // RELACION DEPARTAMENTO:CONVENIOESPECIFICO 1:N
     'ConvenioEspecifico' => array(
     				'className'     => 'ConvenioEspecifico',
-    				'foreignKey'    => 'convenio_especifico_id',
+    				'foreignKey'    => 'departamento_id',
     		),
     // RELACION DEPARTAMENTO:GRUPO 1:N
     'Grupo' => array(
     		'className'     => 'Grupo',
-    		'foreignKey'    => 'grupo_id',
+    		'foreignKey'    => 'departamento_id',
     ),
     	
     // RELACION DEPARTAMENTO:PROYECTO 1:N
     'Proyecto' => array(
     				'className'     => 'Proyecto',
-    				'foreignKey'    => 'proyecto_id',
+    				'foreignKey'    => 'departamento_id',
     		),
 );
     

@@ -1,5 +1,5 @@
 <!-- File: /app/View/EstadoNotificacions/index.ctp -->
-<h1>Blog estadonotificacions</h1>
+<h1>Estado de Notificacions</h1>
 <table>
 	<?php echo $this->Html->link('Agregar Estado', array('controller' => 'estadonotificacions', 'action' => 'add')); ?>
 	

@@ -28,15 +28,13 @@ class ConvenioMarco extends AppModel {
    var $hasMany = array(
    		'ActaAcuerdo' => array(
    				'className'     => 'ActaAcuerdo',
-   				'foreignKey'    => 'acta_acuerdo_id',
-   		)
-   );
+   				'foreignKey'    => 'convenio_marco_id',
+   		),
    	// RELACION CONVENIOMARCO:ARCHIVOCONVENIO 1:1
    
-   var $hasMany = array(
    		'ArchivoConvenio' => array(
    				'className'     => 'ArchivoConvenio',
-   				'foreignKey'    => 'archivo_convenio_id',
+   				'foreignKey'    => 'convenio_marco_id',
    		)
    );
    

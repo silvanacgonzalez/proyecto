@@ -1,6 +1,6 @@
 <?php 
 class ActaAcuerdo extends AppModel { 
-    var $name = ' ActaAcuerdo'; 
+    var $name = 'ActaAcuerdo'; 
     var $validate = array('objetivo' => array('rule' => 'notEmpty'), 
     		'respons_utn' => array('rule' => 'notEmpty'), 'estado' => array('rule' => 'notEmpty'),
     		 'proyecto_id' => array('rule' => 'notEmpty'), 'conveniomarco_id' => array('rule' => 'notEmpty'),

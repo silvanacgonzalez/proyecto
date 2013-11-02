@@ -1,6 +1,6 @@
 <?php
-class ComitenteProyecto extends AppModel {
-	var $name = 'ComitenteProyecto';
+class ComitentesProyecto extends AppModel {
+	var $name = 'ComitentesProyecto';
 	var $validate = array('proyecto_id' => array('rule' =>'notEmpty'),
 			'comitente_id' => array('rule' => 'notEmpty'));	
 	
