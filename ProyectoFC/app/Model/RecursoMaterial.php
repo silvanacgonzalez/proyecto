@@ -1,6 +1,6 @@
 <?php
 class RecursoMaterial extends AppModel {
-	var $name = 'Recurso_Material';
+	var $name = 'RecursoMaterial';
 	var $validate = array('descripcion' => array('rule' =>'notEmpty'),
 			'frecuencia' => array('rule' => 'notEmpty'),
 			'costo_total' => array('rule' => 'notEmpty'),
