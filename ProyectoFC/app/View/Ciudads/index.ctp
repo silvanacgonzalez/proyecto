@@ -17,9 +17,15 @@
 		<?php echo $this->Html->link($ciudad['Ciudad']['nombre'], array('controller' => 'ciudads', 'action' => 'view', $ciudad['Ciudad']['id'])); ?>
 		</td>
 		<td>
+		<?php echo $this->Html->link($ciudad['Ciudad']['cp'], array('controller' => 'ciudads', 'action' => 'view', $ciudad['Ciudad']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($ciudad['Ciudad']['provincia_id'], array('controller' => 'ciudads', 'action' => 'view', $ciudad['Ciudad']['id'])); ?>
+		</td>
+		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $ciudad['Ciudad']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $ciudad['Ciudad']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

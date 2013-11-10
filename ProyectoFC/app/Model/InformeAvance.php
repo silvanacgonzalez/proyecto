@@ -1,6 +1,6 @@
 <?php
 class InformeDeAvance extends AppModel {
-	var $name = 'InformeDeAvance';
+	var $name = 'InformeAvance';
 	var $validate = array('fecha_fin_etapa' => array('rule' => 'notEmpty'), 'periodo_reporte_ini' => array('rule' => 'notEmpty'), 'periodo_reporte_fin' => array('rule' => 'notEmpty'), 'desvio' => array('rule' => 'notEmpty'), 'fecha_reporte' => array('rule' => 'notEmpty'));
 	//Relacion InformeDeAvance:Proyecto 1.1
 	var $belongsTo = array(
@@ -14,7 +14,7 @@ class InformeDeAvance extends AppModel {
 	var $hasMany = array(
 			'Desvio' => array(
 					'className'  	=> 'Desvio',
-					'foreignKey'    => 'informe_de_avance_id',
+					'foreignKey'    => 'informe_avance_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
 			)
 	);

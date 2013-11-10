@@ -35,7 +35,8 @@ class ConvenioEspecifico extends AppModel {
     		'EntidadFirmante' => array(
     				'className'     => 'EntidadFirmante',
     				'foreignKey'    => 'entidad_firmante_id',
-    		)
+   		)
+   
     );
     //------------------------------------------------------------
     // RELACION CONVENIOESPECIFICO:ARCHIVOCONVENIO 1:1
@@ -45,11 +46,7 @@ class ConvenioEspecifico extends AppModel {
     				'className'     => 'ArchivoConvenio',
     				'foreignKey'    => 'convenio_especifico_id',
     		),
-    // RELACION CONVENIOESPECIFICO:ENTIDADFIRMANTE 1:1
-    		'EntidadFirmante' => array(
-    				'className'     => 'EntidadFirmante',
-    				'foreignKey'    => 'convenio_especifico_id',
-    		)
+   
     );
     
   } 

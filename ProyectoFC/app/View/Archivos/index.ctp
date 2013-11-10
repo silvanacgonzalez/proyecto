@@ -5,12 +5,11 @@
 	
 	<tr>
 		<th>Id</th>
-		<th>Archivo</th>
-    	<th>Nombre</th>
+		<th>Nombre</th>
 	    <th>Ruta</th>
 	    <th>Tipo</th>
 		<th>Proyecto</th>
-		
+		<th>Accion</th>
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
 	<?php foreach ($archivos as $archivo): ?>
@@ -20,9 +19,19 @@
 		<?php echo $this->Html->link($archivo['Archivo']['nombre'], array('controller' => 'archivos', 'action' => 'view', $archivo['Archivo']['id'])); ?>
 		</td>
 		<td>
+		<?php echo $this->Html->link($archivo['Archivo']['ruta'], array('controller' => 'archivos', 'action' => 'view', $archivo['Archivo']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($archivo['Archivo']['tipo'], array('controller' => 'archivos', 'action' => 'view', $archivo['Archivo']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($archivo['Archivo']['proyecto_id'], array('controller' => 'archivos', 'action' => 'view', $archivo['Archivo']['id'])); ?>
+		</td>
+		<td>
+		
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $archivo['Archivo']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $archivo['Archivo']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

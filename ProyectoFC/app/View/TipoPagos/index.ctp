@@ -5,7 +5,7 @@
 	
 	<tr>
 		<th>Id</th>
-		<th>Nombre</th>
+		<th>Descripcion</th>
 		<th>Accion</th>
 
 </tr>
@@ -20,7 +20,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $tipopago['TipoPago']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $tipopago['TipoPago']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

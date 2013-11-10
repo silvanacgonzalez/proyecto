@@ -16,7 +16,6 @@
 		<th>Cargo Comitente</th>
 		<th>Objetivo</th>
 		<th>Duracion</th>
-		<th>Cargo UTN</th>
 		<th>Observaciones</th>
 	    <th>Monto</th>
 		<th>Estado</th>
@@ -32,37 +31,37 @@
 	<tr>
 		<td><?php echo $convenioespecifico['ConvenioEspecifico']['id']; ?></td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_devolucion'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['fecha_devolucion'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_devolucion'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['responsable_utn'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['responsable_utn'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['responsable_utn'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['responsable_comit'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['responsable_comit'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['responsable_comit'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_ini'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['fecha_ini'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_ini'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_fin'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['fecha_fin'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_fin'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_firma'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['fecha_firma'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['fecha_firma'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_utn_nombre'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['firm_utn_nombre'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_utn_nombre'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_utn_cargo'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['firm_utn_cargo'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_utn_cargo'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_comit_nombre'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['firm_comit_nombre'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_comit_nombre'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_comit_cargo'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['firm_comit_cargo'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['firm_comit_cargo'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['objetivo'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['objetivo'])); ?>
+		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['objetivo'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 		</td>
 		<td>
 		<?php echo $this->Html->link($convenioespecifico['ConvenioEspecifico']['duracion'], array('controller' => 'convenioespecificos', 'action' => 'view', $convenioespecifico['ConvenioEspecifico']['duracion'])); ?>
@@ -95,7 +94,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $convenioespecifico['ConvenioEspecifico']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $convenioespecifico['ConvenioEspecifico']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

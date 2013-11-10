@@ -7,6 +7,7 @@
 		<th>Id</th>
 		<th>Descripcion</th>
 		<th>Analisis</th>
+		<th>Informe de Avance</th>
 		<th>Acciones</th>
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
@@ -17,9 +18,15 @@
 		<?php echo $this->Html->link($desvio['Desvio']['descripcion'], array('controller' => 'desvios', 'action' => 'view', $desvio['Desvio']['id'])); ?>
 		</td>
 		<td>
+		<?php echo $this->Html->link($desvio['Desvio']['analisis'], array('controller' => 'desvios', 'action' => 'view', $desvio['Desvio']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($desvio['Desvio']['informe_avance_id'], array('controller' => 'desvios', 'action' => 'view', $desvio['Desvio']['id'])); ?>
+		</td>
+		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $desvio['Desvio']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $desvio['Desvio']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

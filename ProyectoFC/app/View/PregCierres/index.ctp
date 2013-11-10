@@ -15,15 +15,23 @@
 	<!-- Here is where we loop through our $directors array, printing out post info -->
 	<?php foreach ($pregcierres as $pregcierre): ?>
 	<tr>
-		<td><?php echo $pregcierre['PregCierre']['id']; ?></td>
-		<td><?php echo $this->Html->link($pregcierre['PregCierre']['sino'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?></td>
-		<td><?php echo $this->Html->link($pregcierre['PregCierre']['causa'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?></td>
-		<td><?php echo $this->Html->link($pregcierre['PregCierre']['ponderacion'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?></td>
-		<td><?php echo $this->Html->link($pregcierre['PregCierre']['cierre_id'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?>	</td>
-        <td><?php echo $this->Html->link($pregcierre['PregCierre']['pregunta_id'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?></td>
+		<td><?php echo $pregcierre['PregCierre']['id']; ?>
+		</td>
+		<td><?php echo $this->Html->link($pregcierre['PregCierre']['sino'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?>
+		</td>
+		<td><?php echo $this->Html->link($pregcierre['PregCierre']['causa'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?>
+		</td>
+		<td><?php echo $this->Html->link($pregcierre['PregCierre']['ponderacion'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?>
+		</td>
+		<td><?php echo $this->Html->link($pregcierre['PregCierre']['cierre_id'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?>	
+		</td>
+        <td><?php echo $this->Html->link($pregcierre['PregCierre']['pregunta_id'], array('controller' => 'pregcierres', 'action' => 'view', $pregcierre['PregCierre']['id'])); ?>
+        </td>
+
+		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $pregcierre['PregCierre']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $pregcierre['PregCierre']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

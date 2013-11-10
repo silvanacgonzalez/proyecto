@@ -5,11 +5,21 @@
 	
 	<tr>
 		<th>Id</th>
-		<th>Nombre</th>
+		<th>DNI</th>
+		<th>Apellido</th>
+		<th>Direccion</th>
+		<th>Email</th>
+		<th>Telefono</th>
+		<th>CUIT</th>
+		<th>Especialidad</th>
+		<th>Titulo</th>
+		<th>Ciudad</th>
+		<th>Provincia</th>
 		<th>Acciones</th>
+		   
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
-	<?php foreach ($persona as $persona): ?>
+	<?php foreach ($personas as $persona): ?>
 	<tr>
 		<td><?php echo $persona['Persona']['id']; ?></td>
 		<td>
@@ -21,11 +31,34 @@
 		<td>
 		<?php echo $this->Html->link($persona['Persona']['apellido'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
 		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['direccion'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['email'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['telefono'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['cuit'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['titulo'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['ciudad_id'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['provincia_id'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+
+
 	
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $persona['Persona']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $persona['Persona']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

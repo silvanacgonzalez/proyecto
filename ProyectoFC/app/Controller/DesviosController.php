@@ -4,7 +4,7 @@ class DesviosController extends AppController {
 	public $components =array('Session');
 	
 	public function index() {
-		$this->set('desvios', $this->Desvios->find('all'));
+		$this->set('desvios', $this->Desvio->find('all'));
 	}
 	
 	public function view($id = null) {

@@ -6,5 +6,7 @@
 	echo $this->Form->create('Cierre');
 	echo $this->Form->input('observaciones');
 	echo $this->Form->input('fecha_reporte');
+	echo $this->Form->input('proyecto_id');
+	echo $this->Form->input('motivo_cierre_id');
 	echo $this->Form->end('Guardar Cierre');
 ?>

@@ -28,9 +28,13 @@
 		</td>
 
 		<td>
+		<?php echo $this->Html->link($plan['Plan']['proyecto_id'], array('controller' => 'plans', 'action' => 'view', $plan['Plan']['id'])); ?>
+		</td>
+		<td>
+		
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $plan['Plan']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $plan['Plan']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

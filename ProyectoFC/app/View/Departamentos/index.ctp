@@ -18,7 +18,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $departamento['Departamento']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $departamento['Departamento']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

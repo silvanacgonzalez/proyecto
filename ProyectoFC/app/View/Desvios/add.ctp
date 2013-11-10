@@ -6,5 +6,6 @@
 	echo $this->Form->create('Desvio');
 	echo $this->Form->input('descripcion');
 	echo $this->Form->input('analisis');
+	echo $this->Form->input('informe_avance_id');
 	echo $this->Form->end('Guardar Desvio');
 ?>

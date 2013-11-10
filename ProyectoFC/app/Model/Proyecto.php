@@ -19,20 +19,20 @@ class Proyecto extends AppModel {
 			'foreignKey'    => 'categoria_id',
 	),
 	// RELACION PROYECTO:GRUPO 1:N
-	'Grupo' => array(
-			'className'     => 'Grupo',
-			'foreignKey'    => 'grupo_id',
-	),
+// 	'Grupo' => array(
+// 			'className'     => 'Grupo',
+// 			'foreignKey'    => 'grupo_id',
+// 	),
 	// RELACION PROYECTO:DEPARTAMENTO 1:N
 	'Departamento' => array(
 			'className'     => 'Departamento',
 			'foreignKey'    => 'departamento_id',
 	),
 	// RELACION PROYECTO:COMITENTE 1:1
-	'Comitente' => array(
-			'className'     => 'Comitente',
-			'foreignKey'    => 'comitente_id',
-	),
+// 	'Comitente' => array(
+// 			'className'     => 'Comitente',
+// 			'foreignKey'    => 'comitente_id',
+// 	),
 	// RELACION PROYECTO:CONTACTO 1:1
 	'Contacto' => array(
 			'className'     => 'Contacto',
