@@ -36,9 +36,9 @@
 			<?php echo $this->Html->link($clasificacion['Clasificacion']['nombre'], array('controller' => 'clasificacions', 'action' => 'view', $clasificacion['Clasificacion']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Form->postLink('Borrar',
+		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $clasificacion['Clasificacion']['id']),
-                array('confirm' => 'Are you sure?'));?>
+                array('confirm' => 'Desea Borrar?'));?>
                 
                 
 		<?php echo $this->Html->link (__('Editar', true), array('action' => 'edit', $clasificacion['Clasificacion']['id'])); ?>

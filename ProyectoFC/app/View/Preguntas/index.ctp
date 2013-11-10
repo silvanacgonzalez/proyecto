@@ -20,7 +20,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $pregunta['Pregunta']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $pregunta['Pregunta']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

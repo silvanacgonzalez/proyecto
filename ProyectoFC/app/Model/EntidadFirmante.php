@@ -17,10 +17,10 @@ class EntidadFirmante extends AppModel {
 			),
 	//Relacion EntidadFirmante:ConvenioEspecifico 1:n
 			'ConvenioEspecifico' => array(
-					'className' 	=> 'ConvenioEspecifico',
-					'foreignKey'    => 'entidad_firmante_id',
+				'className' 	=> 'ConvenioEspecifico',
+				'foreignKey'    => 'entidad_firmante_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-			)
+			),
 	);
 }
 ?>

@@ -1,6 +1,6 @@
 <?php 
 class ConvenioMarco extends AppModel { 
-    var $name = 'Convenio_marco'; 
+    var $name = 'ConvenioMarco'; 
     var $validate = array('fecha_ini' => array('rule' => 'notEmpty'),
     		'fecha_creacion' => array('rule' => 'notEmpty'), 
     		'objetivo' => array('rule' => 'notEmpty'),
@@ -16,7 +16,7 @@ class ConvenioMarco extends AppModel {
                             ) ,
    // RELACION CONVENIOMARCO:ENTIDADFIRMANTE 1:1
    		'EntidadFirmante' => array(
-   				'className'     => 'Entidad_Firmante',
+   				'className'     => 'EntidadFirmante',
    				'foreignKey'    => 'entidad_firmante_id',
    		)
    );

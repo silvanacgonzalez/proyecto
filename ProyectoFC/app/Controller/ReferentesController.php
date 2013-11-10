@@ -1,4 +1,5 @@
 <?php
+App::import('Model','Comitente');
 class ReferentesController extends AppController {
 	public $helpers = array('Html', 'Form','Session');
 	public $components =array('Session');

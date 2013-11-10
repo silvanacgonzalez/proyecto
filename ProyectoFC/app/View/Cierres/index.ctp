@@ -7,6 +7,9 @@
 		<th>Id</th>
 		<th>Observaciones</th>
 		<th>Fecha de Reporte</th>
+		<th>Proyecto_id</th>
+		<th>Motivo Cierre</th>
+		<th>Accion</th>
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
 	<?php foreach ($cierres as $cierre): ?>
@@ -16,9 +19,18 @@
 		<?php echo $this->Html->link($cierre['Cierre']['observaciones'], array('controller' => 'cierres', 'action' => 'view', $cierre['Cierre']['id'])); ?>
 		</td>
 		<td>
+		<?php echo $this->Html->link($cierre['Cierre']['fecha_reporte'], array('controller' => 'cierres', 'action' => 'view', $cierre['Cierre']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($cierre['Cierre']['proyecto_id'], array('controller' => 'cierres', 'action' => 'view', $cierre['Cierre']['id'])); ?>
+		</td>
+        <td>
+		<?php echo $this->Html->link($cierre['Cierre']['motivo_cierre_id'], array('controller' => 'cierres', 'action' => 'view', $cierre['Cierre']['id'])); ?>
+		</td>
+		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $cierre['Cierre']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $cierre['Cierre']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

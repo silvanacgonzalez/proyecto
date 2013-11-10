@@ -11,6 +11,7 @@
 		<th>Monto</th>
 		<th>Ente Ejecutor</th>
 		<th>Monto</th>
+		<th>Accion</th>
 </tr>
 
 	<!-- Here is where we loop through our $directors array, printing out post info -->
@@ -41,7 +42,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $retencion['Retencion']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $retencion['Retencion']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

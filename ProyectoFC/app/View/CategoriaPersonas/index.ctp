@@ -17,7 +17,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $categoriapersona['CategoriaPersona']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $categoriapersona['CategoriaPersona']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

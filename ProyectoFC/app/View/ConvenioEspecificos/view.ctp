@@ -21,5 +21,5 @@
 <p><?php echo h($convenioespecifico['ConvenioEspecifico']['grupo_id']; ?></p>
 <p><?php echo h($convenioespecifico['ConvenioEspecifico']['comitente_id']; ?></p>
 <p><?php echo h($convenioespecifico['ConvenioEspecifico']['proyecto_id']; ?></p>
-<p><?php echo h($convenioespecifico['ConvenioEspecifico']['entidad_firmante_id']; ?></p>
+<p><?php  echo h($convenioespecifico['ConvenioEspecifico']['entidad_firmante_id']; ?></p>
 		

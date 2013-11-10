@@ -26,9 +26,11 @@
 		<td> <?php echo $this->Html->link($contacto['Contacto']['comitente_id'], array('controller' => 'contactos', 'action' => 'view', $contacto['Contacto']['comitente_id'])); ?> </td>
 		<td> <?php echo $this->Html->link($contacto['Contacto']['ciudad_id'], array('controller' => 'contactos', 'action' => 'view', $contacto['Contacto']['ciudad_id'])); ?> </td>
 		<td> <?php echo $this->Html->link($contacto['Contacto']['provincia_id'], array('controller' => 'contactos', 'action' => 'view', $contacto['Contacto']['provincia_id'])); ?> </td>
-		<?php echo $this->Form->postLink('Borrar',
+		
+		<td>
+		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $contacto['Contacto']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $contacto['Contacto']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>
