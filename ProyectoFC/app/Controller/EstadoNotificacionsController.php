@@ -55,16 +55,16 @@ class EstadoNotificacionsController extends AppController {
 		}
 	}
 	
-	public function delete($id) {
-		if ($this->request->is('get')) {
-			throw new MethodNotAllowedException();
-		}
+// 	public function delete($id) {
+// 		if ($this->request->is('get')) {
+// 			throw new MethodNotAllowedException();
+// 		}
 	
-		if ($this->EstadoNotificacion->delete($id)) {
-			$this->Session->setFlash('El Estado con ID: ' . $id . ' fue borrado');
-			$this->redirect(array('action' => 'index'));
-		}
-	}
+// 		if ($this->EstadoNotificacion->delete($id)) {
+// 			$this->Session->setFlash('El Estado con ID: ' . $id . ' fue borrado');
+// 			$this->redirect(array('action' => 'index'));
+// 		}
+// 	}
 }
 
 ?>

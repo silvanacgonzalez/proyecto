@@ -1,6 +1,6 @@
 <!-- File: /app/View/Directors/edit.ctp -->
 
-<h1>Edit Director</h1>
+<h1>Modificar Director</h1>
 <?php
     echo $this->Form->create('Director');
     echo $this->Form->input('descripcion');

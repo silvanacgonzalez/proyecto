@@ -8,10 +8,8 @@ class FacRecDetalle extends AppModel {
 					'className'  	=> 'Rubro',
 					'foreignKey'    => 'rubro_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-			)
-	);
+			),
 	//Relacion FacRecDetalle:FacturaEmitida 1.1
-	var $belongsTo = array(
 			'FacturaRecibida' => array(
 					'className'  	=> 'FacturaRecibida',
 					'foreignKey'    => 'factura_recibida_id',

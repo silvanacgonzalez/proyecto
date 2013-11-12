@@ -8,15 +8,14 @@ class FacEmitDetalle extends AppModel {
 					'className'  	=> 'Rubro',
 					'foreignKey'    => 'rubro_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
-			)
-	);
+			),
 	//Relacion FacEmitDetalle:FacturaEmitida 1.1
-	var $belongsTo = array(
-			'FacturaEmitida' => array(
+	'FacturaEmitida' => array(
 					'className'  	=> 'FacturaEmitida',
 					'foreignKey'    => 'factura_emitida_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
+	
 			)
-	);
+		);
 }
 ?>

@@ -1,6 +1,6 @@
 <!-- File: /app/View/Directors/add.ctp -->
 
-<h1>Add Director</h1>
+<h1>Nuevo Director</h1>
 
 <?php
 	echo $this->Form->create('Director');

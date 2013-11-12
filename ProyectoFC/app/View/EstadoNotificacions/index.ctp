@@ -16,10 +16,10 @@
 		<?php echo $this->Html->link($estadonotificacion['EstadoNotificacion']['nombre'], array('controller' => 'estadonotificacions', 'action' => 'view', $estadonotificacion['EstadoNotificacion']['id'])); ?>
 		</td>
 		<td>
-		<?php echo $this->Form->postLink('Delete',
+		<?php echo $this->Form->postLink('Borrar',
                 array('action' => 'delete', $estadonotificacion['EstadoNotificacion']['id']),
                 array('confirm' => 'Está seguro de que desea borrar?'));?>
-		<?php echo $this->Html->link('Edit', array('action' => 'edit', $estadonotificacion['EstadoNotificacion']['id'])); ?>
+		<?php echo $this->Html->link('Editar', array('action' => 'edit', $estadonotificacion['EstadoNotificacion']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>
 	<?php unset($estadonotificacion); ?>
