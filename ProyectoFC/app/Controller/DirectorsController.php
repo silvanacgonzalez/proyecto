@@ -9,35 +9,35 @@ class DirectorsController extends AppController {
 	
 	public function view($id = null) {
 		if (!$id) {
-			throw new NotFoundException(__('Director no encontrado'));
+			throw new NotFoundException(__('Dato no encontrado'));
 		}
-		$post = $this->Post->findById($id);
-		if (!$post) {
-			throw new NotFoundException(__('Director no encontrado'));
+		$director = $this->Director->findById($id);
+		if (!$director) {
+			throw new NotFoundException(__('Dato no encontrado'));
 		}
 			$this->set('director', $director);
 	}
 	
 	public function add() {
-		if ($this->request->is('director')) {
+		if ($this->request->is('post')) {
 			$this->Director->create();
 			if ($this->Director->save($this->request->data)) {
-				$this->Session->setFlash('El Director se grabó correctamente');
+				$this->Session->setFlash('Los datos se grabaron correctamente');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash('El Director no pudo ser grabado');
+				$this->Session->setFlash('Los datos no se pudieron grabar');
 			}
 		}
 	}
 	
 	public function edit($id = null) {
 		if (!$id) {
-			throw new NotFoundException(__('Director no encontrado'));
+			throw new NotFoundException(__('Dato no encontrado'));
 		}
 	
-		$post = $this->Director->findById($id);
-		if (!$post) {
-			throw new NotFoundException(__('Director no encontrado'));
+		$director = $this->Director->findById($id);
+		if (!$director) {
+			throw new NotFoundException(__('Dato no encontrado'));
 		}
 	
 		if ($this->request->is('director') || $this->request->is('put')) {
@@ -55,16 +55,16 @@ class DirectorsController extends AppController {
 		}
 	}
 	
-	public function delete($id) {
-		if ($this->request->is('get')) {
-			throw new MethodNotAllowedException();
-		}
-	
-		if ($this->Director->delete($id)) {
-			$this->Session->setFlash('El Director con ID: ' . $id . ' fue borrado');
-			$this->redirect(array('action' => 'index'));
-		}
-	}
+ 	public function delete($id) {
+ 		if ($this->request->is('get')) {
+ 			throw new MethodNotAllowedException();
+ 		}
+
+ 		if ($this->Director->delete($id)) {
+ 			$this->Session->setFlash('El Director con ID: ' . $id . ' fue borrado');
+ 			$this->redirect(array('action' => 'index'));
+ 		}
+ 	}
 }
 
 ?>

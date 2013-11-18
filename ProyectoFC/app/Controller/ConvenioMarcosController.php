@@ -15,7 +15,7 @@ class ConvenioMarcosController extends AppController {
 		if (!$conveniomarco) {
 			throw new NotFoundException(__('Convenio Marco no encontrado'));
 		}
-			$this->set('conveiomarco', $conveniomarco);
+			$this->set('conveniomarco', $conveniomarco);
 	}
 	
 	public function add() {

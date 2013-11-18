@@ -3,7 +3,7 @@
 <h1>Edit Contactos</h1>
 <?php
     echo $this->Form->create('Contacto');
-    echo $this->Form->input('nombre');echo $this->Form->input('nombre');
+    echo $this->Form->input('nombre');
 	echo $this->Form->input('apellido');
 	echo $this->Form->input('domicilio');
 	echo $this->Form->input('telefono');

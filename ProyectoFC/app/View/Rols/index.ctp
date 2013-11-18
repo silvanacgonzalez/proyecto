@@ -6,6 +6,7 @@
 	<tr>
 		<th>Id</th>
 		<th>Descripcion</th>
+		<th>Accion</th>
 </tr>
 
 	<!-- Here is where we loop through our $directors array, printing out post info -->
@@ -13,7 +14,7 @@
 	<tr>
 		<td><?php echo $rol['Rol']['id']; ?></td>
 		<td>
-		<?php echo $this->Html->link($Rol['Rol']['descripcion'], array('controller' => 'rols', 'action' => 'view', $rol['Rol']['id'])); ?>
+		<?php echo $this->Html->link($rol['Rol']['descripcion'], array('controller' => 'rols', 'action' => 'view', $rol['Rol']['id'])); ?>
 		</td>
 		<td>
 		<?php echo $this->Form->postLink('Delete',

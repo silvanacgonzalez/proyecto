@@ -12,6 +12,7 @@
 		<th>Pagina Web</th>
 		<th>Telefono</th>
 		<th>Ciudad</th>
+		<th>Provincia</th>
 		<th>categoria_iva_id</th>
 		<th>tipo_comitente_id</>
 		<th>Acciones</>
@@ -41,6 +42,9 @@
 		</td>
 		<td>
 		<?php echo $this->Html->link($comitente['Comitente']['ciudad_id'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['provincia_id'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
 		</td>
 		<td>
 		<?php echo $this->Html->link($comitente['Comitente']['categoria_iva_id'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>

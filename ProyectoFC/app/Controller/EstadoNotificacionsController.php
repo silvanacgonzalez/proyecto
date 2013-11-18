@@ -22,7 +22,7 @@ class EstadoNotificacionsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->EstadoNotificacion->create();
 			if ($this->EstadoNotificacion->save($this->request->data)) {
-				$this->Session->setFlash('El Estado se grabó correctamente');
+				$this->Session->setFlash('El Estado se grabo correctamente');
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash('El Estado no pudo ser grabado');
@@ -61,7 +61,8 @@ class EstadoNotificacionsController extends AppController {
 		}
 	
 		if ($this->EstadoNotificacion->delete($id)) {
-			$this->Session->setFlash('El Estado con ID: ' . $id . ' fue borrado');
+			$estadonotificacion = $this->EstadoNotificacion->findById($id);
+			$this->Session->setFlash('El Estado ' . $id . ' fue borrado');
 			$this->redirect(array('action' => 'index'));
 		}
 	}

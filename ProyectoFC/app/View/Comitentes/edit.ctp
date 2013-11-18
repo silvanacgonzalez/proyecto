@@ -10,6 +10,7 @@
 	echo $this->Form->input('pag_web');
 	echo $this->Form->input('telefono');
 	echo $this->Form->input('ciudad_id');
+	echo $this->Form->input('provincia_id');
 	echo $this->Form->input('categoria_iva_id');
 	echo $this->Form->input('tipo_comitente_id');
  	echo $this->Form->input('id', array('type' => 'hidden'));

@@ -5,9 +5,9 @@ class Rol extends AppModel {
 	//--------------------------------------
 	// RELACION ROL:INTEGRANTE 1:n
 	var $hasMany = array(
-			'Rol' => array(
-					'className'     => 'Rol',
-					'foreignKey'    => 'integrante_id',
+			'Integrante' => array(
+					'className'     => 'Integrante',
+					'foreignKey'    => 'rol_id',
 							)
                     	);
 	
