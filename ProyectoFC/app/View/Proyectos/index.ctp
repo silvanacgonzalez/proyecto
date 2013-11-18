@@ -14,7 +14,6 @@
 		<th>Aval Legal</th>
 		<th>Aval Dpto</th>
 		<th>Aval Admin</th>
-		<th>Aval Dpto</th>
 		<th>Aval SEU</th>
 		<th>Acciones</th>
 	</tr>

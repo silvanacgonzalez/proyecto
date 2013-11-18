@@ -5,7 +5,7 @@
     echo $this->Form->create('Proyecto');
     echo $this->Form->input('nombre');
 	echo $this->Form->input('fecha_ini_real');
-	echo $this->Form->input(' fecha_fin_real ');
+	echo $this->Form->input('fecha_fin_real');
 	echo $this->Form->input('presupuesto_real');
 	echo $this->Form->input('fecha_retorno_acta');
 	echo $this->Form->input('coordinador');

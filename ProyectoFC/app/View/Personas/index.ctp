@@ -6,6 +6,7 @@
 	<tr>
 		<th>Id</th>
 		<th>DNI</th>
+		<th>Nombre</th>
 		<th>Apellido</th>
 		<th>Direccion</th>
 		<th>Email</th>
@@ -42,6 +43,9 @@
 		</td>
 		<td>
 		<?php echo $this->Html->link($persona['Persona']['cuit'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($persona['Persona']['especialidad'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>
 		</td>
 		<td>
 		<?php echo $this->Html->link($persona['Persona']['titulo'], array('controller' => 'personas', 'action' => 'view', $persona['Persona']['id'])); ?>

@@ -18,7 +18,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Borrar',
                 array('action' => 'delete', $estadonotificacion['EstadoNotificacion']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Editar', array('action' => 'edit', $estadonotificacion['EstadoNotificacion']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

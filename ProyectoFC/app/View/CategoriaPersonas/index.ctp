@@ -6,6 +6,7 @@
 	<tr>
 		<th>Id</th>
 		<th>Nombre</th>
+		<th>Accion</th>
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
 	<?php foreach ($categoriapersonas as $categoriapersona): ?>

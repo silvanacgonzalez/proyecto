@@ -5,7 +5,11 @@
 	
 	<tr>
 		<th>Id</th>
-		<th>Nombre</th>
+		<th>Descripcion</th>
+		<th>Cantidad</th>
+		<th>Monto</th>
+		<th>Rubro</th>
+		<th>Factura Recibida</th>
 		<th>Acciones</th>
 	</tr>
 	<!-- Here is where we loop through our $facrecdetalles array, printing out post info -->

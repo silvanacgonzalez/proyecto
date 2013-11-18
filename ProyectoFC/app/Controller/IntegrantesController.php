@@ -1,27 +1,27 @@
 <?php
-class DirectorsController extends AppController {
+class IntegrantesController extends AppController {
 	public $helpers = array('Html', 'Form','Session');
 	public $components =array('Session');
 	
 	public function index() {
-		$this->set('directors', $this->Director->find('all'));
+		$this->set('integrantes', $this->Integrante->find('all'));
 	}
 	
 	public function view($id = null) {
 		if (!$id) {
 			throw new NotFoundException(__('Dato no encontrado'));
 		}
-		$director = $this->Director->findById($id);
-		if (!$director) {
+		$integrante = $this->Integrante->findById($id);
+		if (!$integrante) {
 			throw new NotFoundException(__('Dato no encontrado'));
 		}
-			$this->set('director', $director);
+			$this->set('integrante', $integrante);
 	}
 	
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->Director->create();
-			if ($this->Director->save($this->request->data)) {
+			$this->Integrante->create();
+			if ($this->Integrante->save($this->request->data)) {
 				$this->Session->setFlash('Los datos se grabaron correctamente');
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -35,14 +35,14 @@ class DirectorsController extends AppController {
 			throw new NotFoundException(__('Dato no encontrado'));
 		}
 	
-		$director = $this->Director->findById($id);
-		if (!$director) {
+		$integrante = $this->Integrante->findById($id);
+		if (!$integrante) {
 			throw new NotFoundException(__('Dato no encontrado'));
 		}
 	
-		if ($this->request->is('director') || $this->request->is('put')) {
-			$this->Director->id = $id;
-			if ($this->Director->save($this->request->data)) {
+		if ($this->request->is('integrante') || $this->request->is('put')) {
+			$this->Integrante->id = $id;
+			if ($this->Integrante->save($this->request->data)) {
 				$this->Session->setFlash('Los datos se actualizaron correctamente');
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -51,20 +51,20 @@ class DirectorsController extends AppController {
 		}
 	
 		if (!$this->request->data) {
-			$this->request->data = $director;
+			$this->request->data = $integrante;
 		}
 	}
 	
- 	public function delete($id) {
- 		if ($this->request->is('get')) {
- 			throw new MethodNotAllowedException();
- 		}
-
- 		if ($this->Director->delete($id)) {
- 			$this->Session->setFlash('El Director con ID: ' . $id . ' fue borrado');
- 			$this->redirect(array('action' => 'index'));
- 		}
- 	}
+	public function delete($id) {
+		if ($this->request->is('get')) {
+			throw new MethodNotAllowedException();
+		}
+	
+		if ($this->Integrante->delete($id)) {
+			$this->Session->setFlash('El Integrante con ID: ' . $id . ' fue borrado');
+			$this->redirect(array('action' => 'index'));
+		}
+	}
 }
 
 ?>
