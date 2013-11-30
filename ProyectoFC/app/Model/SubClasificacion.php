@@ -13,8 +13,8 @@ class SubClasificacion extends AppModel {
 	//---------------------------------------------------------
 	// RELACION SUB_CLASIFICACION:ITEMS_CLASIFICACION 1:N
 	var $hasMany = array(
-			'ItemClasificacion' => array(
-					'className'     => 'ItemClasificacion',
+			'ItemSubClasificacion' => array(
+					'className'     => 'ItemSubClasificacion',
 					'foreignKey'    => 'sub_clasificacion_id',
 							)
                     	);

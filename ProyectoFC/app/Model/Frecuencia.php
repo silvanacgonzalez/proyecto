@@ -4,8 +4,8 @@ class Frecuencia extends AppModel {
 	var $validate = array('nombre' => array('rule' => 'notEmpty'));
 	//Relacion Frecuencia:RecursoMaterial 1.n
 	var $hasMany = array(
-			'RecursoMaterial' => array(
-					'className'  	=> 'RecursoMaterial',
+			'RecursoMaterials' => array(
+					'className'  	=> 'RecursoMaterials',
 					'foreignKey'    => 'frecuencia_id',
 					//'conditions'  => array('Comentario.estado' => '1'),
 			)

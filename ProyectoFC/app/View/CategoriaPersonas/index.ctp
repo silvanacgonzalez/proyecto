@@ -6,6 +6,7 @@
 	<tr>
 		<th>Id</th>
 		<th>Nombre</th>
+		<th>Accion</th>
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
 	<?php foreach ($categoriapersonas as $categoriapersona): ?>
@@ -17,7 +18,7 @@
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $categoriapersona['CategoriaPersona']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $categoriapersona['CategoriaPersona']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

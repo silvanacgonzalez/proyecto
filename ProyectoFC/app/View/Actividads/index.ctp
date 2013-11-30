@@ -6,11 +6,12 @@
 	<tr>
 		<th>Id</th>
 		<th>Nombre</th>
+		<th>Prog Entregable</th>
 		<th>Mes Inicio</th>
 		<th>Mes Fin</th>
-		<th>Mes Hitos</th>
-		<th>Mes Etapa</th>
-		
+		<th>Hitos</th>
+		<th>Etapa</th>
+		<th>Accion </th>
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
 	<?php foreach ($actividads as $actividad): ?>
@@ -19,10 +20,29 @@
 		<td>
 		<?php echo $this->Html->link($actividad['Actividad']['nombre'], array('controller' => 'actividads', 'action' => 'view', $actividad['Actividad']['id'])); ?>
 		</td>
+		
+		<td>
+		<?php echo $this->Html->link($actividad['Actividad']['prod_entregable'], array('controller' => 'actividads', 'action' => 'view', $actividad['Actividad']['id'])); ?>
+		</td>
+		
+		<td>
+		<?php echo $this->Html->link($actividad['Actividad']['mes_ini'], array('controller' => 'actividads', 'action' => 'view', $actividad['Actividad']['id'])); ?>
+		</td>
+		
+		<td>
+		<?php echo $this->Html->link($actividad['Actividad']['mes_fin'], array('controller' => 'actividads', 'action' => 'view', $actividad['Actividad']['id'])); ?>
+		</td>
+		
+		<td>
+		<?php echo $this->Html->link($actividad['Actividad']['hitos'], array('controller' => 'actividads', 'action' => 'view', $actividad['Actividad']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($actividad['Actividad']['etapa_id'], array('controller' => 'actividads', 'action' => 'view', $actividad['Actividad']['id'])); ?>
+		</td>
 		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $actividad['Actividad']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Esta seguro de que desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $actividad['Actividad']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

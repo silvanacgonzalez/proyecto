@@ -6,6 +6,8 @@
 	<tr>
 		<th>Id</th>
 		<th>Nombre</th>
+		<th>Descripcion</th>
+		<th>Accion</th>
 	</tr>
 	<!-- Here is where we loop through our $directors array, printing out post info -->
 	<?php foreach ($categorias as $categoria): ?>
@@ -15,9 +17,12 @@
 		<?php echo $this->Html->link($categoria['Categoria']['nombre'], array('controller' => 'categorias', 'action' => 'view', $categoria['Categoria']['id'])); ?>
 		</td>
 		<td>
+		<?php echo $this->Html->link($categoria['Categoria']['descripcion'], array('controller' => 'categorias', 'action' => 'view', $categoria['Categoria']['id'])); ?>
+		</td>
+		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $categoria['Categoria']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $categoria['Categoria']['id'])); ?>
 	</tr>
 	<?php endforeach; ?>

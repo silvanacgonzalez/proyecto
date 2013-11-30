@@ -63,7 +63,7 @@ class DATABASE_CONFIG {
 		'password' => 'pablo',
 		'database' => 'proyecto',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 
 	public $test = array(
@@ -74,6 +74,6 @@ class DATABASE_CONFIG {
 		'password' => 'pablo',
 		'database' => 'test_database_name',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 }

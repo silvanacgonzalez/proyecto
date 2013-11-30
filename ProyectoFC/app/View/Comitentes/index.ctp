@@ -12,6 +12,7 @@
 		<th>Pagina Web</th>
 		<th>Telefono</th>
 		<th>Ciudad</th>
+		<th>Provincia</th>
 		<th>categoria_iva_id</th>
 		<th>tipo_comitente_id</>
 		<th>Acciones</>
@@ -31,11 +32,31 @@
 		<?php echo $this->Html->link($comitente['Comitente']['cuit'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
 		</td>
 		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['email'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['pag_web'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['telefono'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['ciudad_id'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['provincia_id'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['categoria_iva_id'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
+		<?php echo $this->Html->link($comitente['Comitente']['tipo_comitente_id'], array('controller' => 'comitentes', 'action' => 'view', $comitente['Comitente']['id'])); ?>
+		</td>
+		<td>
 		<?php echo $this->Form->postLink('Delete',
                 array('action' => 'delete', $comitente['Comitente']['id']),
-                array('confirm' => 'Está seguro de que desea borrar?'));?>
+                array('confirm' => 'Desea borrar?'));?>
                 
-               
                 
 		<?php echo $this->Html->link('Edit', array('action' => 'edit', $comitente['Comitente']['id'])); ?>
 	</tr>
